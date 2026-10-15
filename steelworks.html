@@ -1,87 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Africannese Steelworks & Construction</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#0b0b0b;color:#fff;line-height:1.6}
-header{background:linear-gradient(135deg,#ffd700,#8b6b00);color:#000;padding:70px 20px;text-align:center}
-header img{max-width:170px;width:100%;margin-bottom:18px}
-nav{background:#111;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;padding:16px;position:sticky;top:0}
-nav a{color:#fff;text-decoration:none;background:#222;padding:12px 22px;border-radius:30px;font-weight:bold}
-nav a.active,nav a:hover{background:#ffd700;color:#000}
-.container{max-width:1200px;margin:auto;padding:50px 20px}
-h2{color:#ffd700;text-align:center;margin:20px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.card{background:#171717;border:1px solid #333;border-radius:18px;padding:24px}
-.card h3{color:#ffd700;margin-bottom:10px}
-.list li{margin-left:18px;margin-bottom:8px}
-.cta{text-align:center;margin:40px 0}
-.btn{display:inline-block;background:#ffd700;color:#000;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold}
-footer{background:#111;text-align:center;padding:35px;margin-top:40px}
-.whatsapp{position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:34px}
-</style>
-</head>
-<body>
 
-<header>
-<img src="logo.png" alt="Africannese Steelworks Logo">
-<h1>Africannese Steelworks & Construction</h1>
-<p><strong>Changing Strong Ideas into Strong Structures</strong></p>
-</header>
+    <meta charset="UTF-8">
 
-<nav>
-<a href="index.html">Home</a>
-<a class="active" href="steelworks.html">Steelworks</a>
-<a href="corporatewear.html">Corporate Wear</a>
-<a href="about.html">About</a>
-</nav>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<div class="container">
+    <meta
+        name="description"
+        content="Africannese Steelworks & Construction - Professional steel fabrication, structural steel, welding, construction, repairs and custom steel solutions."
+    >
 
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card"><h3>Steel Fabrication</h3><ul class="list"><li>Structural steel</li><li>General welding</li><li>Steel erection</li><li>Roof structures</li></ul></div>
-<div class="card"><h3>Construction</h3><ul class="list"><li>Building construction</li><li>Renovations</li><li>Painting</li><li>Plumbing</li><li>Electrical installations</li></ul></div>
-<div class="card"><h3>Custom Steel</h3><ul class="list"><li>Carports</li><li>Security gates</li><li>Burglar proofing</li><li>Balustrades</li><li>Structural repairs</li></ul></div>
-</div>
+    <title>
+        Africannese Steelworks & Construction
+    </title>
 
-<h2>Capabilities</h2>
-<div class="grid">
-<div class="card"><h3>Workshop</h3><p>Fabrication of structural steel, custom steel products and repair work.</p></div>
-<div class="card"><h3>Site Installation</h3><p>Professional installation for residential, commercial and industrial projects.</p></div>
-<div class="card"><h3>Safety</h3><p>Committed to quality workmanship, safe working practices and on-time delivery.</p></div>
-</div>
 
-<h2>Completed Projects</h2>
-<div class="grid">
-<div class="card"><h3>Church Roof Structure</h3><p>Steel roof structure completed in Mamelodi.</p></div>
-<div class="card"><h3>Security Gates & Carports</h3><p>Manufacture and installation in Pretoria East.</p></div>
-<div class="card"><h3>Structural Repairs</h3><p>Repair work completed for a construction contractor.</p></div>
-</div>
+    <style>
 
-<h2>Current Equipment</h2>
-<div class="grid">
-<div class="card"><h3>Existing Assets</h3><ul class="list"><li>Welding Machine</li><li>Angle Grinder</li></ul></div>
-<div class="card"><h3>Expansion Plan</h3><ul class="list"><li>Plasma Cutter</li><li>Generator</li><li>Compressor</li><li>Drill Press</li></ul></div>
-</div>
+        /* =====================================================
+           RESET
+           ===================================================== */
 
-<div class="cta">
-<a class="btn" href="https://wa.me/27712447847">Request a Quotation</a>
-</div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-</div>
 
-<footer>
-<p><strong>Email:</strong> info@africannese.co.za</p>
-<p><strong>Phone:</strong> +27 71 244 7847</p>
-<p><strong>Address:</strong> 38850 Mshona Avenue, Mamelodi</p>
-<p>© 2026 Africannese Steelworks & Construction</p>
-</footer>
+        html {
+            scroll-behavior: smooth;
+        }
 
-<a class="whatsapp" href="https://wa.me/27712447847">💬</a>
 
-</body>
-</html>
+        body {
+            font-family:
+                "Helvetica Neue",
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: #080808;
+
+            color: #ffffff;
+
+            line-height: 1.6;
+        }
+
+
+        a {
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           COLOURS
+           ===================================================== */
+
+        :root {
+
+            --black: #080808;
+
+            --deep-black: #050505;
+
+            --dark: #111111;
+
+            --card: #151515;
+
+            --gold: #ffd200;
+
+            --gold-dark: #c6a400;
+
+            --white: #ffffff;
+
+            --grey: #929292;
+
+            --light-grey: #c8c8c8;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(7, 7, 7, .97);
+
+            border-bottom:
+                1px solid
+                rgba(255, 210, 0, .15);
+
+            min-height: 82px;
+
+            padding:
+                15px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+
+        .nav-brand {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+
+        }
+
+
+        .nav-brand strong {
+
+            font-size: 21px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .nav-brand span {
+
+            color: var(--gold);
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+            margin-top: 6px;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+
+            gap: 6px;
+
+        }
+
+
+        .nav-links a {
+
+            color: #d5d5d5;
+
+            padding:
+                10px 14px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            transition: .25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            background: var(--gold);
+
+            color: #000000;
+
+        }
+
+
+        .nav-links .active {
+
+            background: var(--gold);
+
+            color: #000000;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .hero {
+
+            min-height: 700px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #080808 0%,
+                    #171717 55%,
+                    #0a0a0a 100%
+                );
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+
+            height: 650px;
+
+            border:
+                100px solid
+                rgba(255, 210, 0, .045);
+
+            border-radius: 50%;
+
+            right: -300px;
+
+            top: -300px;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 800px;
+
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,210,0,.55)
+                );
+
+            right: -150px;
+
+            bottom: 150px;
+
+            transform:
+                rotate(-30deg);
+
+        }
+
+
+        .hero-content {
+
+            width:
+                min(1180px, 90%);
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+
+            padding:
+                90px 0 120px;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           LOGO
+           ===================================================== */
+
+        .steelworks-logo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .steelworks-logo img {
+
+            width:
+                min(230px, 65vw);
+
+            height: auto;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(
+                    0 12px 25px
+                    rgba(0,0,0,.45)
+                );
+
+        }
+
+
+        .hero-label {
+
+            color: var(--gold);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            max-width: 900px;
+
+            margin:
+                0 auto;
+
+            font-size:
+                clamp(42px, 7vw, 78px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            font-weight: 900;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .hero-tagline {
+
+            max-width: 700px;
+
+            margin:
+                25px auto 0;
+
+            color: #bdbdbd;
+
+            font-size:
+                clamp(17px, 2vw, 21px);
+
+            font-weight: 500;
+
+            letter-spacing: .3px;
+
+        }
+
+
+        .hero-line {
+
+            width: 70px;
+
+            height: 4px;
+
+            background: var(--gold);
+
+            margin:
+                30px auto;
+
+        }
+
+
+        .hero-actions {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+           
