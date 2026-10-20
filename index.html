@@ -1,692 +1,1447 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Africannese Group | Building Africa Through Excellence</title>
 
-    <meta
-        name="description"
-        content="Africannese Group - Building Africa Through Excellence. Steelworks, construction, corporate wear and digital branding solutions."
-    >
+    <meta name="description" content="Africannese Group delivers professional steelworks, construction, corporate wear and digital branding solutions. Building Africa Through Excellence.">
+    <meta name="theme-color" content="#080808">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .home-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 28px 6%;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-main {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 4px;
+        }
+
+        .brand-sub {
+            margin-top: 5px;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #ffd400;
+        }
+
+        .home-nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .home-nav a {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.72);
+            transition: 0.3s ease;
+        }
+
+        .home-nav a:hover {
+            color: #ffd400;
+        }
+
+        .nav-quote {
+            border: 1px solid #ffd400;
+            padding: 12px 19px;
+            color: #ffd400 !important;
+        }
+
+        .nav-quote:hover {
+            background: #ffd400;
+            color: #080808 !important;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .home-hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 82% 18%, rgba(255,212,0,0.09), transparent 28%),
+                radial-gradient(circle at 15% 85%, rgba(255,212,0,0.045), transparent 30%),
+                #080808;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0.055;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+            background-size: 70px 70px;
+            mask-image: linear-gradient(to right, black, transparent 85%);
+        }
+
+        .hero-line {
+            position: absolute;
+            right: 8%;
+            top: 17%;
+            width: 1px;
+            height: 66%;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(255,212,0,0.7),
+                transparent
+            );
+        }
+
+        .hero-circle {
+            position: absolute;
+            right: -180px;
+            bottom: -280px;
+            width: 650px;
+            height: 650px;
+            border: 1px solid rgba(255,212,0,0.13);
+            border-radius: 50%;
+        }
+
+        .hero-circle::before {
+            content: "";
+            position: absolute;
+            inset: 70px;
+            border: 1px solid rgba(255,212,0,0.08);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+            padding: 150px 6% 90px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-kicker {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 28px;
+            color: #ffd400;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-kicker::before {
+            content: "";
+            width: 42px;
+            height: 2px;
+            background: #ffd400;
+        }
+
+        .hero-title {
+            max-width: 1000px;
+            font-size: clamp(58px, 8.5vw, 132px);
+            line-height: 0.9;
+            font-weight: 900;
+            letter-spacing: -6px;
+            text-transform: uppercase;
+        }
+
+        .hero-title span {
+            color: #ffd400;
+        }
+
+        .hero-description {
+            max-width: 640px;
+            margin-top: 34px;
+            color: #a8a8a8;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 38px;
+        }
+
+        .button-primary,
+        .button-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 25px;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .button-primary {
+            background: #ffd400;
+            color: #080808;
+        }
+
+        .button-primary:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #ffffff;
+        }
+
+        .button-secondary:hover {
+            border-color: #ffd400;
+            color: #ffd400;
+            transform: translateY(-2px);
+        }
+
+        .hero-bottom {
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: #666;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-bottom-line {
+            width: 55px;
+            height: 1px;
+            background: #ffd400;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        .home-section {
+            padding: 120px 6%;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .section-kicker {
+            color: #ffd400;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+
+        .section-title {
+            max-width: 760px;
+            font-size: clamp(38px, 5vw, 70px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .section-text {
+            max-width: 650px;
+            margin-top: 25px;
+            color: #999;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        /* =========================
+           APPROACH
+        ========================= */
+
+        .approach {
+            background: #111111;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .approach-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .approach-highlight {
+            border-left: 2px solid #ffd400;
+            padding-left: 34px;
+        }
+
+        .approach-highlight strong {
+            display: block;
+            font-size: clamp(27px, 3vw, 43px);
+            line-height: 1.05;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .approach-highlight p {
+            margin-top: 20px;
+            color: #8d8d8d;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .approach-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.09);
+        }
+
+        .approach-point {
+            min-height: 150px;
+            padding: 30px;
+            background: #111111;
+        }
+
+        .approach-point h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .approach-point p {
+            margin-top: 10px;
+            color: #777;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           DIVISIONS
+        ========================= */
+
+        .divisions {
+            background: #080808;
+        }
+
+        .division-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 55px;
+        }
+
+        .division-heading-text {
+            max-width: 720px;
+        }
+
+        .division-heading-note {
+            max-width: 300px;
+            color: #6e6e6e;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .division-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .division-card {
+            position: relative;
+            min-height: 540px;
+            padding: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            transition: 0.4s ease;
+        }
+
+        .division-card::before {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            right: -90px;
+            top: -90px;
+            border: 1px solid rgba(255,255,255,0.16);
+            transition: 0.4s ease;
+        }
+
+        .division-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.25);
+        }
+
+        .division-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .division-card:hover::before {
+            transform: scale(1.3);
+        }
+
+        /* STEELWORKS */
+
+        .steel-card {
+            background:
+                linear-gradient(145deg, rgba(255,212,0,0.06), transparent 45%),
+                #151515;
+            border: 1px solid rgba(255,212,0,0.45);
+        }
+
+        .steel-card::after {
+            background: #ffd400;
+        }
+
+        /* CORPORATE WEAR */
+
+        .wear-card {
+            background:
+                linear-gradient(145deg, rgba(255,255,255,0.08), transparent 45%),
+                #19aaa4;
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .wear-card::after {
+            background: rgba(255,255,255,0.75);
+        }
+
+        /* DIGITAL BRANDING */
+
+        .digital-card {
+            background:
+                linear-gradient(145deg, rgba(255,255,255,0.12), transparent 45%),
+                #c89aaa;
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #151515;
+        }
+
+        .digital-card::after {
+            background: rgba(20,20,20,0.5);
+        }
+
+        .card-top {
+            position: absolute;
+            top: 35px;
+            left: 38px;
+            right: 38px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-label {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .steel-card .card-label {
+            color: #ffd400;
+        }
+
+        .wear-card .card-label {
+            color: #ffffff;
+        }
+
+        .digital-card .card-label {
+            color: #171717;
+        }
+
+        .card-symbol {
+            width: 38px;
+            height: 38px;
+            border: 1px solid currentColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-title {
+            max-width: 380px;
+            font-size: clamp(30px, 3vw, 45px);
+            line-height: 0.98;
+            letter-spacing: -2px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .card-text {
+            max-width: 400px;
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .steel-card .card-text {
+            color: #999;
+        }
+
+        .wear-card .card-text {
+            color: rgba(255,255,255,0.82);
+        }
+
+        .digital-card .card-text {
+            color: rgba(20,20,20,0.72);
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            width: fit-content;
+            margin-top: 28px;
+            padding-top: 17px;
+            border-top: 1px solid rgba(255,255,255,0.25);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .digital-card .card-link {
+            border-color: rgba(20,20,20,0.3);
+        }
+
+        .card-link span {
+            transition: 0.3s ease;
+        }
+
+        .division-card:hover .card-link span {
+            transform: translateX(7px);
+        }
+
+        /* =========================
+           STANDARDS
+        ========================= */
+
+        .standards {
+            background: #eeeeea;
+            color: #101010;
+        }
+
+        .standards .section-kicker {
+            color: #111111;
+        }
+
+        .standards-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 100px;
+            align-items: start;
+        }
+
+        .standards-intro p {
+            color: #666;
+            margin-top: 24px;
+            max-width: 500px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid #c8c8c4;
+            border-left: 1px solid #c8c8c4;
+        }
+
+        .standard-item {
+            padding: 35px;
+            min-height: 150px;
+            border-right: 1px solid #c8c8c4;
+            border-bottom: 1px solid #c8c8c4;
+        }
+
+        .standard-item strong {
+            display: block;
+            font-size: 26px;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .standard-item span {
+            display: block;
+            margin-top: 12px;
+            color: #777;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .home-cta {
+            position: relative;
+            overflow: hidden;
+            background: #ffd400;
+            color: #090909;
+        }
+
+        .cta-circle {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(0,0,0,0.13);
+            border-radius: 50%;
+            right: -160px;
+            top: -250px;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .cta-title {
+            max-width: 850px;
+            font-size: clamp(38px, 5vw, 70px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .cta-text {
+            margin-top: 17px;
+            max-width: 620px;
+            font-size: 14px;
+            color: rgba(0,0,0,0.65);
+        }
+
+        .cta-button {
+            flex-shrink: 0;
+            background: #090909;
+            color: #ffffff;
+            padding: 19px 27px;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            color: #090909;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .home-footer {
+            background: #050505;
+            padding: 75px 6% 25px;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.7fr;
+            gap: 80px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand {
+            max-width: 450px;
+        }
+
+        .footer-brand h2 {
+            font-size: 24px;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+
+        .footer-brand h2 span {
+            color: #ffd400;
+        }
+
+        .footer-brand p {
+            margin-top: 18px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: #ffd400;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer-column a,
+        .footer-column p {
+            display: block;
+            margin-bottom: 11px;
+            color: #888;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #555;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp-button {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-5px) scale(1.04);
+        }
+
+        .whatsapp-button svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .home-nav {
+                gap: 18px;
+            }
+
+            .home-nav a:not(.nav-quote) {
+                display: none;
+            }
+
+            .hero-title {
+                letter-spacing: -4px;
+            }
+
+            .approach-layout,
+            .standards-layout {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .division-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .division-card {
+                min-height: 480px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .home-header {
+                padding: 22px 5%;
+            }
+
+            .brand-main {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+
+            .brand-sub {
+                font-size: 7px;
+                letter-spacing: 3px;
+            }
+
+            .nav-quote {
+                padding: 10px 13px;
+                font-size: 9px !important;
+            }
+
+            .hero-content {
+                padding: 135px 5% 70px;
+            }
+
+            .hero-title {
+                font-size: clamp(50px, 16vw, 78px);
+                letter-spacing: -3px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero-bottom {
+                margin-top: 55px;
+            }
+
+            .home-section {
+                padding: 80px 5%;
+            }
+
+            .section-title {
+                letter-spacing: -2px;
+            }
+
+            .division-heading {
+                display: block;
+            }
+
+            .division-heading-note {
+                margin-top: 20px;
+            }
+
+            .division-card {
+                min-height: 460px;
+                padding: 28px;
+            }
+
+            .card-top {
+                left: 28px;
+                right: 28px;
+                top: 28px;
+            }
+
+            .approach-points,
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .standard-item {
+                min-height: 120px;
+            }
+
+            .cta-title {
+                letter-spacing: -2px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .whatsapp-button {
+                right: 18px;
+                bottom: 18px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-<!-- =========================================================
-     NAVIGATION
-     ========================================================= -->
+    <header class="home-header">
+        <div class="header-inner">
 
-<nav class="navbar">
-
-    <div class="nav-brand">
-        <a href="index.html">
-            <span>AFRICANNESE</span>
-            <small>GROUP</small>
-        </a>
-    </div>
-
-
-    <div class="nav-links">
-
-        <a href="index.html" class="active">
-            Home
-        </a>
-
-        <a href="steelworks.html">
-            Steelworks
-        </a>
-
-        <a href="corporatewear.html">
-            Corporate Wear
-        </a>
-
-        <a href="digitalbranding.html">
-            Digital Branding
-        </a>
-
-        <a href="services.html">
-            Services
-        </a>
-
-        <a href="projects.html">
-            Projects
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a href="quote.html" class="nav-quote">
-            Request Quote
-        </a>
-
-    </div>
-
-</nav>
-
-
-
-<!-- =========================================================
-     PREMIUM HERO
-     ========================================================= -->
-
-<header class="hero">
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="hero-content">
-
-
-        <div class="hero-brand">
-
-            <span class="brand-main">
-                AFRICANNESE
-            </span>
-
-            <span class="brand-sub">
-                GROUP
-            </span>
-
-        </div>
-
-
-        <div class="gold-line"></div>
-
-
-        <p class="hero-eyebrow">
-            ENGINEERING • CONSTRUCTION • BRANDING
-        </p>
-
-
-        <h1>
-            Building Africa
-            <br>
-            <span>Through Excellence.</span>
-        </h1>
-
-
-        <p class="hero-description">
-            Professional steelworks, construction, corporate wear,
-            digital branding and business solutions delivered with
-            precision, quality and purpose.
-        </p>
-
-
-        <div class="hero-actions">
-
-            <a href="quote.html" class="gold-button">
-                REQUEST A QUOTE
+            <a href="index.html" class="brand">
+                <span class="brand-main">AFRICANNESE</span>
+                <span class="brand-sub">GROUP</span>
             </a>
 
-            <a href="projects.html" class="outline-button">
-                VIEW OUR PROJECTS
-            </a>
+            <nav class="home-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="quote.html" class="nav-quote">Request a Quote</a>
+            </nav>
 
         </div>
+    </header>
 
 
-    </div>
+    <!-- =========================
+         HERO
+    ========================== -->
 
+    <main>
 
-    <div class="hero-bottom">
+        <section class="home-hero">
 
-        <div>
-            <strong>01</strong>
-            <span>ENGINEERING</span>
-        </div>
+            <div class="hero-grid"></div>
+            <div class="hero-line"></div>
+            <div class="hero-circle"></div>
 
-        <div>
-            <strong>02</strong>
-            <span>BRANDING</span>
-        </div>
+            <div class="hero-content">
 
-        <div>
-            <strong>03</strong>
-            <span>BUSINESS SOLUTIONS</span>
-        </div>
+                <div class="hero-kicker">
+                    Engineering • Construction • Branding
+                </div>
 
-    </div>
+                <h1 class="hero-title">
+                    Building Africa<br>
+                    Through <span>Excellence.</span>
+                </h1>
 
-</header>
-
-
-
-<!-- =========================================================
-     INTRODUCTION
-     ========================================================= -->
-
-<section class="intro-section">
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-            <p class="section-kicker">
-                AFRICANNESE GROUP
-            </p>
-
-            <h2>
-                Excellence in every
-                <span>detail.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="intro-grid">
-
-
-            <div class="intro-copy">
-
-                <p class="lead">
-                    Africannese Group is a South African
-                    multidisciplinary company providing
-                    professional solutions across engineering,
-                    construction, corporate wear and digital
-                    branding.
+                <p class="hero-description">
+                    Professional steelworks, construction, corporate wear,
+                    digital branding and business solutions delivered with
+                    precision, quality and purpose.
                 </p>
 
-                <p>
-                    We combine practical industry experience,
-                    professional workmanship and creative
-                    solutions to help our clients build,
-                    operate and present their businesses with
-                    confidence.
-                </p>
+                <div class="hero-actions">
+                    <a href="quote.html" class="button-primary">
+                        Request a Quote
+                    </a>
 
-                <p>
-                    From structural steel and fabrication to
-                    branded corporate clothing and digital
-                    identity, our divisions provide specialised
-                    services under one trusted group.
-                </p>
+                    <a href="projects.html" class="button-secondary">
+                        View Our Projects
+                    </a>
+                </div>
+
+                <div class="hero-bottom">
+                    <span class="hero-bottom-line"></span>
+                    Built for Africa. Built to last.
+                </div>
 
             </div>
 
-
-            <div class="intro-highlight">
-
-                <span>
-                    OUR APPROACH
-                </span>
-
-                <h3>
-                    Built to perform.
-                </h3>
-
-                <p>
-                    Quality workmanship. Professional service.
-                    Reliable solutions.
-                </p>
-
-            </div>
+        </section>
 
 
-        </div>
+        <!-- =========================
+             APPROACH
+        ========================== -->
 
-    </div>
+        <section class="home-section approach">
 
-</section>
+            <div class="section-inner approach-layout">
 
+                <div>
 
-
-<!-- =========================================================
-     DIVISIONS
-     ========================================================= -->
-
-<section class="divisions-section">
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered">
-
-            <p class="section-kicker">
-                OUR DIVISIONS
-            </p>
-
-            <h2>
-                Three divisions.
-                <span>One standard.</span>
-            </h2>
-
-            <p class="section-description">
-                Specialist services designed to deliver practical,
-                professional and lasting results.
-            </p>
-
-        </div>
-
-
-
-        <div class="division-grid">
-
-
-            <!-- STEELWORKS -->
-
-            <article class="division-card steelworks-card">
-
-                <div class="division-top">
-
-                    <span class="division-label">
-                        STEELWORKS & CONSTRUCTION
-                    </span>
-
-                    <div class="division-icon">
-                        S
+                    <div class="section-kicker">
+                        Our Approach
                     </div>
+
+                    <h2 class="section-title">
+                        Built to<br>Perform.
+                    </h2>
+
+                    <p class="section-text">
+                        We combine practical experience, professional
+                        workmanship and a commitment to quality to deliver
+                        solutions that work in the real world.
+                    </p>
 
                 </div>
 
+                <div class="approach-highlight">
 
-                <div class="division-body">
-
-                    <h3>
-                        Steelworks & Construction
-                    </h3>
+                    <strong>
+                        Quality workmanship.<br>
+                        Professional service.<br>
+                        Reliable solutions.
+                    </strong>
 
                     <p>
-                        Structural steel fabrication, welding,
-                        erection, repairs, carports, palisade
-                        fencing and container conversions.
+                        Every project is approached with attention to detail,
+                        clear communication and a focus on delivering lasting
+                        value to our clients.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DIVISIONS
+        ========================== -->
+
+        <section class="home-section divisions">
+
+            <div class="section-inner">
+
+                <div class="division-heading">
+
+                    <div class="division-heading-text">
+
+                        <div class="section-kicker">
+                            Our Divisions
+                        </div>
+
+                        <h2 class="section-title">
+                            Three Divisions.<br>
+                            One Standard.
+                        </h2>
+
+                    </div>
+
+                    <p class="division-heading-note">
+                        Specialist services designed to deliver practical,
+                        professional and lasting results.
                     </p>
 
                 </div>
 
 
-                <a href="steelworks.html" class="division-link">
-                    EXPLORE STEELWORKS
-                    <span>→</span>
-                </a>
+                <div class="division-grid">
 
-            </article>
+                    <!-- STEELWORKS -->
+
+                    <a href="steelworks.html" class="division-card steel-card">
+
+                        <div class="card-top">
+
+                            <span class="card-label">
+                                Steelworks & Construction
+                            </span>
+
+                            <div class="card-symbol">
+                                S
+                            </div>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3 class="card-title">
+                                Steelworks &<br>
+                                Construction
+                            </h3>
+
+                            <p class="card-text">
+                                Structural steel fabrication, welding,
+                                erection, repairs, carports, palisade fencing
+                                and container conversions.
+                            </p>
+
+                            <div class="card-link">
+                                Explore Steelworks
+                                <span>→</span>
+                            </div>
+
+                        </div>
+
+                    </a>
 
 
+                    <!-- CORPORATE WEAR -->
 
-            <!-- CORPORATE WEAR -->
+                    <a href="corporatewear.html" class="division-card wear-card">
 
-            <article class="division-card corporate-card">
+                        <div class="card-top">
 
-                <div class="division-top">
+                            <span class="card-label">
+                                Corporate Wear
+                            </span>
 
-                    <span class="division-label">
-                        CORPORATE WEAR
-                    </span>
+                            <div class="card-symbol">
+                                C
+                            </div>
 
-                    <div class="division-icon">
-                        C
-                    </div>
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3 class="card-title">
+                                Corporate<br>
+                                Wear
+                            </h3>
+
+                            <p class="card-text">
+                                Corporate clothing, workwear, PPE, embroidery,
+                                screen printing and promotional apparel.
+                            </p>
+
+                            <div class="card-link">
+                                Explore Corporate Wear
+                                <span>→</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- DIGITAL BRANDING -->
+
+                    <a href="digitalbranding.html" class="division-card digital-card">
+
+                        <div class="card-top">
+
+                            <span class="card-label">
+                                Digital Branding
+                            </span>
+
+                            <div class="card-symbol">
+                                D
+                            </div>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3 class="card-title">
+                                Digital<br>
+                                Branding
+                            </h3>
+
+                            <p class="card-text">
+                                Website design, company profiles, logo design,
+                                business plans, branding, printing and social
+                                media design.
+                            </p>
+
+                            <div class="card-link">
+                                Explore Digital Branding
+                                <span>→</span>
+                            </div>
+
+                        </div>
+
+                    </a>
 
                 </div>
 
+            </div>
 
-                <div class="division-body">
+        </section>
 
-                    <h3>
-                        Corporate Wear
-                    </h3>
+
+        <!-- =========================
+             STANDARDS
+        ========================== -->
+
+        <section class="home-section standards">
+
+            <div class="section-inner standards-layout">
+
+                <div class="standards-intro">
+
+                    <div class="section-kicker">
+                        Our Standard
+                    </div>
+
+                    <h2 class="section-title">
+                        Built Around<br>
+                        Quality.
+                    </h2>
 
                     <p>
-                        Corporate clothing, workwear, PPE,
-                        embroidery, screen printing and
-                        promotional apparel.
+                        From fabrication and construction to branding and
+                        corporate solutions, our focus remains the same:
+                        professional execution and dependable results.
                     </p>
 
                 </div>
 
 
-                <a href="corporatewear.html" class="division-link">
-                    EXPLORE CORPORATE WEAR
-                    <span>→</span>
-                </a>
+                <div class="standards-grid">
 
-            </article>
+                    <div class="standard-item">
+                        <strong>100%</strong>
+                        <span>Black Owned</span>
+                    </div>
 
+                    <div class="standard-item">
+                        <strong>35+</strong>
+                        <span>Years Leadership Experience</span>
+                    </div>
 
+                    <div class="standard-item">
+                        <strong>3+</strong>
+                        <span>Business Divisions</span>
+                    </div>
 
-            <!-- DIGITAL BRANDING -->
-
-            <article class="division-card digital-card">
-
-                <div class="division-top">
-
-                    <span class="division-label">
-                        DIGITAL BRANDING
-                    </span>
-
-                    <div class="division-icon">
-                        D
+                    <div class="standard-item">
+                        <strong>SA</strong>
+                        <span>Nationwide Service</span>
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="division-body">
+        </section>
 
-                    <h3>
-                        Digital Branding
-                    </h3>
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="home-section home-cta">
+
+            <div class="cta-circle"></div>
+
+            <div class="cta-inner">
+
+                <div>
+
+                    <h2 class="cta-title">
+                        Let's Build<br>
+                        Something Better.
+                    </h2>
+
+                    <p class="cta-text">
+                        Have a project, business requirement or idea?
+                        Let's discuss how Africannese Group can help.
+                    </p>
+
+                </div>
+
+                <a href="quote.html" class="cta-button">
+                    Start Your Project →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="home-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+
+                    <h2>
+                        AFRICANNESE <span>GROUP</span>
+                    </h2>
 
                     <p>
-                        Website design, company profiles,
-                        logo design, business plans, branding
-                        and printing solutions.
+                        Building Africa Through Excellence.
+                        Professional solutions across steelworks,
+                        construction, corporate wear and digital branding.
                     </p>
 
                 </div>
 
 
-                <a href="digitalbranding.html" class="division-link">
-                    EXPLORE DIGITAL BRANDING
-                    <span>→</span>
-                </a>
+                <div class="footer-column">
 
-            </article>
+                    <h3>Quick Links</h3>
 
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="quote.html">Request a Quote</a>
 
-        </div>
-
-    </div>
-
-</section>
+                </div>
 
 
+                <div class="footer-column">
 
-<!-- =========================================================
-     WHY CHOOSE US
-     ========================================================= -->
+                    <h3>Contact</h3>
 
-<section class="why-section">
+                    <p>
+                        138 Troye Street<br>
+                        Sunnyside, Pretoria
+                    </p>
 
-    <div class="section-container">
+                    <a href="tel:+27712447847">
+                        +27 71 244 7847
+                    </a>
 
+                    <a href="mailto:info@africannese.co.za">
+                        info@africannese.co.za
+                    </a>
 
-        <div class="section-heading centered">
+                </div>
 
-            <p class="section-kicker">
-                WHY AFRICANNESE
-            </p>
-
-            <h2>
-                Experience you can
-                <span>build on.</span>
-            </h2>
-
-        </div>
+            </div>
 
 
-        <div class="stats-grid">
-
-
-            <div class="stat-box">
-
-                <strong>
-                    100%
-                </strong>
+            <div class="footer-bottom">
 
                 <span>
-                    BLACK OWNED
+                    © 2026 Africannese Group. All Rights Reserved.
                 </span>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <strong>
-                    35+
-                </strong>
 
                 <span>
-                    YEARS LEADERSHIP EXPERIENCE
-                </span>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <strong>
-                    3+
-                </strong>
-
-                <span>
-                    BUSINESS DIVISIONS
-                </span>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <strong>
-                    SA
-                </strong>
-
-                <span>
-                    NATIONWIDE SERVICE
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CALL TO ACTION
-     ========================================================= -->
-
-<section class="cta-section">
-
-    <div class="section-container">
-
-        <div class="cta-box">
-
-
-            <div class="cta-content">
-
-                <p class="section-kicker">
-                    START YOUR PROJECT
-                </p>
-
-                <h2>
-                    Let's build something
-                    <span>exceptional.</span>
-                </h2>
-
-                <p>
-                    Whether you need steelwork, construction,
-                    corporate wear or digital branding,
-                    Africannese Group is ready to work with you.
-                </p>
-
-            </div>
-
-
-            <a href="quote.html" class="cta-button">
-                REQUEST A QUOTE
-                <span>→</span>
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer>
-
-    <div class="section-container">
-
-
-        <div class="footer-grid">
-
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-                    AFRICANNESE
-                    <span>GROUP</span>
-                </a>
-
-                <p>
                     Building Africa Through Excellence.
-                </p>
-
-                <a
-                    href="https://wa.me/27712447847"
-                    class="footer-whatsapp"
-                    target="_blank"
-                >
-                    WhatsApp Us →
-                </a>
+                </span>
 
             </div>
-
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact
-                </h3>
-
-                <p>
-                    138 Troye Street<br>
-                    Sunnyside<br>
-                    Pretoria
-                </p>
-
-                <a href="mailto:info@africannese.co.za">
-                    info@africannese.co.za
-                </a>
-
-                <a href="tel:+27712447847">
-                    +27 71 244 7847
-                </a>
-
-            </div>
-
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Divisions
-                </h3>
-
-                <a href="steelworks.html">
-                    Steelworks
-                </a>
-
-                <a href="corporatewear.html">
-                    Corporate Wear
-                </a>
-
-                <a href="digitalbranding.html">
-                    Digital Branding
-                </a>
-
-            </div>
-
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Company
-                </h3>
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </div>
-
 
         </div>
 
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 Africannese Group. All Rights Reserved.
-            </span>
-
-            <span>
-                Building Africa Through Excellence.
-            </span>
-
-        </div>
+    </footer>
 
 
-    </div>
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
 
-</footer>
+    <a
+        href="https://wa.me/27712447847"
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with Africannese Group on WhatsApp"
+    >
 
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M19.11 17.39c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+            <path d="M16.01 3C8.83 3 3 8.83 3 16c0 2.29.6 4.44 1.65 6.3L3 29l6.86-1.6A12.95 12.95 0 0 0 16.01 29C23.17 29 29 23.17 29 16S23.17 3 16.01 3zm0 23.68c-2.06 0-4.08-.55-5.84-1.59l-.42-.25-4.07.95.97-3.97-.27-.43A10.97 10.97 0 1 1 16.01 26.68z"/>
+        </svg>
 
-
-<!-- =========================================================
-     FLOATING WHATSAPP
-     ========================================================= -->
-
-<a
-    href="https://wa.me/27712447847"
-    class="whatsapp-float"
-    target="_blank"
-    aria-label="Contact Africannese Group on WhatsApp"
->
-
-    <span class="whatsapp-symbol">◉</span>
-
-    <span class="whatsapp-text">
-        WhatsApp
-    </span>
-
-</a>
-
+    </a>
 
 </body>
-
 </html>
