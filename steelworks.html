@@ -1,424 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Africannese Steelworks & Construction</title>
 
-    <meta
-        name="description"
-        content="Africannese Steelworks & Construction - Professional steel fabrication, structural steel, welding, construction, repairs and custom steel solutions."
-    >
+    <meta name="description" content="Africannese Steelworks & Construction — professional steel fabrication, structural steel, welding, erection and construction services.">
 
-    <title>
-        Africannese Steelworks & Construction
-    </title>
+    <link rel="stylesheet" href="steelworks.css">
+</head>
 
+<body>
 
-    <style>
+<!-- =====================================================
+     HEADER / HERO
+     ===================================================== -->
 
-        /* =====================================================
-           RESET
-           ===================================================== */
+<header class="steel-hero">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <div class="hero-overlay"></div>
 
+    <div class="hero-content">
 
-        html {
-            scroll-behavior: smooth;
-        }
+        <img
+            src="steelworks-logo.png"
+            alt="Africannese Steelworks & Construction Logo"
+            class="steelworks-logo"
+        >
 
+        <div class="hero-label">
+            AFRICANNESE STEELWORKS & CONSTRUCTION
+        </div>
 
-        body {
-            font-family:
-                "Helvetica Neue",
-                Helvetica,
-                Arial,
-                sans-serif;
+        <h1>
+            Building Strength.<br>
+            Engineering Excellence.
+        </h1>
 
-            background: #080808;
+        <p class="hero-tagline">
+            Professional steel fabrication, structural steel,
+            welding, erection and construction solutions.
+        </p>
 
-            color: #ffffff;
+        <div class="hero-buttons">
 
-            line-height: 1.6;
-        }
+            <a href="quote.html" class="primary-button">
+                REQUEST A QUOTE
+            </a>
 
+            <a href="projects.html" class="secondary-button">
+                VIEW PROJECTS
+            </a>
 
-        a {
-            text-decoration: none;
+        </div>
 
-            color: inherit;
-        }
+    </div>
 
+</header>
 
-        /* =====================================================
-           COLOURS
-           ===================================================== */
 
-        :root {
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
 
-            --black: #080808;
+<nav class="steel-nav">
 
-            --deep-black: #050505;
+    <a href="index.html">Home</a>
 
-            --dark: #111111;
+    <a href="steelworks.html" class="active">
+        Steelworks
+    </a>
 
-            --card: #151515;
+    <a href="corporatewear.html">
+        Corporate Wear
+    </a>
 
-            --gold: #ffd200;
+    <a href="digitalbranding.html">
+        Digital Branding
+    </a>
 
-            --gold-dark: #c6a400;
+    <a href="services.html">
+        Services
+    </a>
 
-            --white: #ffffff;
+    <a href="projects.html">
+        Projects
+    </a>
 
-            --grey: #929292;
+    <a href="about.html">
+        About
+    </a>
 
-            --light-grey: #c8c8c8;
+    <a href="contact.html">
+        Contact
+    </a>
 
-        }
+    <a href="quote.html">
+        Quote
+    </a>
 
+</nav>
 
-        /* =====================================================
-           NAVIGATION
-           ===================================================== */
 
-        .navbar {
+<!-- =====================================================
+     INTRODUCTION
+     ===================================================== -->
 
-            position: sticky;
+<section class="steel-section steel-intro">
 
-            top: 0;
+    <div class="steel-container">
 
-            z-index: 1000;
+        <div class="section-heading">
 
-            background:
-                rgba(7, 7, 7, .97);
+            <span>AFRICANNESE STEELWORKS</span>
 
-            border-bottom:
-                1px solid
-                rgba(255, 210, 0, .15);
+            <h2>
+                Built to Perform.
+            </h2>
 
-            min-height: 82px;
+            <div class="heading-line"></div>
 
-            padding:
-                15px 5%;
+        </div>
 
-            display: flex;
+        <p class="intro-text">
+            Africannese Steelworks & Construction provides
+            professional steel fabrication, welding, structural
+            steel erection, repairs and construction solutions
+            for residential, commercial and industrial projects.
+        </p>
 
-            align-items: center;
+    </div>
 
-            justify-content: space-between;
+</section>
 
-            gap: 25px;
 
-        }
+<!-- =====================================================
+     OUR SERVICES
+     ===================================================== -->
 
+<section class="steel-section services-section">
 
-        .nav-brand {
+    <div class="steel-container">
 
-            display: flex;
+        <div class="section-heading centered">
 
-            flex-direction: column;
+            <span>WHAT WE DO</span>
 
-            line-height: 1;
+            <h2>
+                Our Services
+            </h2>
 
-        }
+            <div class="heading-line"></div>
 
+        </div>
 
-        .nav-brand strong {
 
-            font-size: 21px;
+        <div class="steel-grid">
 
-            font-weight: 900;
 
-            letter-spacing: 1px;
+            <!-- STEEL FABRICATION -->
 
-        }
+            <article class="steel-card">
 
+                <div class="card-number">
+                    01
+                </div>
 
-        .nav-brand span {
+                <h3>
+                    Steel Fabrication
+                </h3>
 
-            color: var(--gold);
+                <p>
+                    Precision fabrication of structural and
+                    custom steel components for residential,
+                    commercial and industrial applications.
+                </p>
 
-            font-size: 9px;
+                <ul>
+                    <li>Structural steel</li>
+                    <li>General welding</li>
+                    <li>Roof structures</li>
+                    <li>Steel frames</li>
+                    <li>Custom steelwork</li>
+                </ul>
 
-            font-weight: 900;
+            </article>
 
-            letter-spacing: 4px;
 
-            margin-top: 6px;
+            <!-- STEEL ERECTION -->
 
-        }
+            <article class="steel-card">
 
+                <div class="card-number">
+                    02
+                </div>
 
-        .nav-links {
+                <h3>
+                    Steel Erection
+                </h3>
 
-            display: flex;
+                <p>
+                    Professional on-site installation and
+                    erection of steel structures with a focus
+                    on quality, safety and accuracy.
+                </p>
 
-            flex-wrap: wrap;
+                <ul>
+                    <li>Structural erection</li>
+                    <li>Steel frame installation</li>
+                    <li>Roof structures</li>
+                    <li>Site welding</li>
+                    <li>Structural assembly</li>
+                </ul>
 
-            justify-content: flex-end;
+            </article>
 
-            gap: 6px;
 
-        }
+            <!-- CONSTRUCTION -->
 
+            <article class="steel-card">
 
-        .nav-links a {
+                <div class="card-number">
+                    03
+                </div>
 
-            color: #d5d5d5;
+                <h3>
+                    Construction
+                </h3>
 
-            padding:
-                10px 14px;
+                <p>
+                    Practical construction and building
+                    solutions delivered with professional
+                    project coordination.
+                </p>
 
-            border-radius: 30px;
+                <ul>
+                    <li>Building construction</li>
+                    <li>Renovations</li>
+                    <li>Painting</li>
+                    <li>Plumbing</li>
+                    <li>Electrical installations</li>
+                </ul>
 
-            font-size: 12px;
+            </article>
 
-            font-weight: 800;
 
-            transition: .25s ease;
+            <!-- CUSTOM STEEL -->
 
-        }
+            <article class="steel-card">
 
+                <div class="card-number">
+                    04
+                </div>
 
-        .nav-links a:hover {
+                <h3>
+                    Custom Steelwork
+                </h3>
 
-            background: var(--gold);
+                <p>
+                    Custom-designed steel products fabricated
+                    to suit individual requirements and site
+                    conditions.
+                </p>
 
-            color: #000000;
+                <ul>
+                    <li>Carports</li>
+                    <li>Security gates</li>
+                    <li>Burglar proofing</li>
+                    <li>Balustrades</li>
+                    <li>Palisade fencing</li>
+                </ul>
 
-        }
+            </article>
 
 
-        .nav-links .active {
+            <!-- REPAIRS -->
 
-            background: var(--gold);
+            <article class="steel-card">
 
-            color: #000000;
+                <div class="card-number">
+                    05
+                </div>
 
-        }
+                <h3>
+                    Structural Repairs
+                </h3>
 
+                <p>
+                    Repair and restoration of damaged steelwork,
+                    structures and fabricated components.
+                </p>
 
-        /* =====================================================
-           HERO
-           ===================================================== */
+                <ul>
+                    <li>Steel repairs</li>
+                    <li>Welding repairs</li>
+                    <li>Structural reinforcement</li>
+                    <li>Damaged steel replacement</li>
+                    <li>Maintenance work</li>
+                </ul>
 
-        .hero {
+            </article>
 
-            min-height: 700px;
 
-            position: relative;
+            <!-- CONTAINER CONVERSIONS -->
 
-            overflow: hidden;
+            <article class="steel-card">
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #080808 0%,
-                    #171717 55%,
-                    #0a0a0a 100%
-                );
+                <div class="card-number">
+                    06
+                </div>
 
-            display: flex;
+                <h3>
+                    Container Conversions
+                </h3>
 
-            align-items: center;
+                <p>
+                    Practical steel modifications and container
+                    conversion solutions for business,
+                    storage and construction applications.
+                </p>
 
-        }
+                <ul>
+                    <li>Container modifications</li>
+                    <li>Doors and windows</li>
+                    <li>Security installations</li>
+                    <li>Steel structures</li>
+                    <li>Custom fabrication</li>
+                </ul>
 
+            </article>
 
-        .hero::before {
+        </div>
 
-            content: "";
+    </div>
 
-            position: absolute;
+</section>
 
-            width: 650px;
 
-            height: 650px;
+<!-- =====================================================
+     CAPABILITIES
+     ===================================================== -->
 
-            border:
-                100px solid
-                rgba(255, 210, 0, .045);
+<section class="steel-section capabilities-section">
 
-            border-radius: 50%;
+    <div class="steel-container">
 
-            right: -300px;
+        <div class="section-heading centered">
 
-            top: -300px;
+            <span>OUR CAPABILITIES</span>
 
-        }
+            <h2>
+                Built Around Quality
+            </h2>
 
+            <div class="heading-line"></div>
 
-        .hero::after {
+        </div>
 
-            content: "";
 
-            position: absolute;
+        <div class="capabilities-grid">
 
-            width: 800px;
+            <div class="capability">
 
-            height: 2px;
+                <div class="capability-icon">
+                    01
+                </div>
 
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(255,210,0,.55)
-                );
+                <h3>
+                    Workshop Fabrication
+                </h3>
 
-            right: -150px;
+                <p>
+                    Structural steel, custom steel products
+                    and professional welding work.
+                </p>
 
-            bottom: 150px;
+            </div>
 
-            transform:
-                rotate(-30deg);
 
-        }
+            <div class="capability">
 
+                <div class="capability-icon">
+                    02
+                </div>
 
-        .hero-content {
+                <h3>
+                    Site Installation
+                </h3>
 
-            width:
-                min(1180px, 90%);
+                <p>
+                    Professional installation for residential,
+                    commercial and industrial projects.
+                </p>
 
-            margin: auto;
+            </div>
 
-            position: relative;
 
-            z-index: 2;
+            <div class="capability">
 
-            padding:
-                90px 0 120px;
+                <div class="capability-icon">
+                    03
+                </div>
 
-            text-align: center;
+                <h3>
+                    Safety & Quality
+                </h3>
 
-        }
+                <p>
+                    A commitment to quality workmanship,
+                    safe working practices and reliable delivery.
+                </p>
 
+            </div>
 
-        /* =====================================================
-           LOGO
-           ===================================================== */
+        </div>
 
-        .steelworks-logo {
+    </div>
 
-            display: flex;
+</section>
 
-            justify-content: center;
 
-            align-items: center;
+<!-- =====================================================
+     PROJECTS
+     ===================================================== -->
 
-            margin-bottom: 30px;
+<section class="steel-section projects-section">
 
-        }
+    <div class="steel-container">
 
+        <div class="section-heading centered">
 
-        .steelworks-logo img {
+            <span>OUR WORK</span>
 
-            width:
-                min(230px, 65vw);
+            <h2>
+                Selected Projects
+            </h2>
 
-            height: auto;
+            <div class="heading-line"></div>
 
-            object-fit: contain;
+        </div>
 
-            filter:
-                drop-shadow(
-                    0 12px 25px
-                    rgba(0,0,0,.45)
-                );
 
-        }
+        <div class="project-grid">
 
 
-        .hero-label {
+            <div class="project-card">
 
-            color: var(--gold);
+                <div class="project-number">
+                    01
+                </div>
 
-            font-size: 11px;
+                <h3>
+                    Church Roof Structure
+                </h3>
 
-            font-weight: 900;
+                <p>
+                    Steel roof structure fabrication and
+                    installation project in Mamelodi.
+                </p>
 
-            letter-spacing: 4px;
+            </div>
 
-            margin-bottom: 20px;
 
-        }
+            <div class="project-card">
 
+                <div class="project-number">
+                    02
+                </div>
 
-        .hero h1 {
+                <h3>
+                    Security Gates & Carports
+                </h3>
 
-            max-width: 900px;
+                <p>
+                    Manufacture and installation of custom
+                    security gates and carports in Pretoria East.
+                </p>
 
-            margin:
-                0 auto;
+            </div>
 
-            font-size:
-                clamp(42px, 7vw, 78px);
 
-            line-height: 1;
+            <div class="project-card">
 
-            letter-spacing: -3px;
+                <div class="project-number">
+                    03
+                </div>
 
-            font-weight: 900;
+                <h3>
+                    Structural Repairs
+                </h3>
 
-        }
+                <p>
+                    Professional structural repair work
+                    completed for a construction contractor.
+                </p>
 
+            </div>
 
-        .hero h1 span {
+        </div>
 
-            color: var(--gold);
 
-        }
+        <div class="projects-button">
 
+            <a href="projects.html" class="primary-button">
+                VIEW ALL PROJECTS
+            </a>
 
-        .hero-tagline {
+        </div>
 
-            max-width: 700px;
+    </div>
 
-            margin:
-                25px auto 0;
+</section>
 
-            color: #bdbdbd;
 
-            font-size:
-                clamp(17px, 2vw, 21px);
+<!-- =====================================================
+     EQUIPMENT
+     ===================================================== -->
 
-            font-weight: 500;
+<section class="steel-section equipment-section">
 
-            letter-spacing: .3px;
+    <div class="steel-container">
 
-        }
+        <div class="section-heading centered">
 
+            <span>CAPABILITY & GROWTH</span>
 
-        .hero-line {
+            <h2>
+                Workshop Equipment
+            </h2>
 
-            width: 70px;
+            <div class="heading-line"></div>
 
-            height: 4px;
+        </div>
 
-            background: var(--gold);
 
-            margin:
-                30px auto;
+        <div class="equipment-grid">
 
-        }
 
+            <div class="equipment-card">
 
-        .hero-actions {
+                <h3>
+                    Current Equipment
+                </h3>
 
-            display: flex;
+                <ul>
 
-            justify-content: center;
+                    <li>
+                        Welding Machine
+                    </li>
 
-            align-items: center;
+                    <li>
+                        Angle Grinder
+                    </li>
 
-           
+                </ul>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+                <h3>
+                    Expansion
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Plasma Cutter
+                    </li>
+
+                    <li>
+                        Generator
+                    </li>
+
+                    <li>
+                        Compressor
+                    </li>
+
+                    <li>
+                        Drill Press
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALL TO ACTION
+     ===================================================== -->
+
+<section class="steel-cta">
+
+    <div class="cta-inner">
+
+        <span>
+            LET'S BUILD SOMETHING STRONG
+        </span>
+
+        <h2>
+            Have a Steelwork<br>
+            Project in Mind?
+        </h2>
+
+        <p>
+            Talk to Africannese Steelworks & Construction
+            about your next project.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="quote.html" class="primary-button">
+                REQUEST A QUOTE
+            </a>
+
+            <a
+                href="https://wa.me/27712447847"
+                class="secondary-button"
+            >
+                WHATSAPP US
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="steel-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h3>
+                AFRICANNESE
+            </h3>
+
+            <p>
+                STEELWORKS & CONSTRUCTION
+            </p>
+
+            <span>
+                Building Africa Through Engineering Excellence.
+            </span>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                138 Troye Street,<br>
+                Sunnyside, Pretoria
+            </p>
+
+            <p>
+                <a href="mailto:info@africannese.co.za">
+                    info@africannese.co.za
+                </a>
+            </p>
+
+            <p>
+                <a href="tel:+27712447847">
+                    +27 71 244 7847
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="quote.html">
+                Request a Quote
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Africannese Steelworks & Construction.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+     ===================================================== -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/27712447847"
+    aria-label="Chat with Africannese on WhatsApp"
+>
+    <span>◉</span>
+</a>
+
+</body>
+</html>
