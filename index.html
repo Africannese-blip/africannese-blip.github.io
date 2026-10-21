@@ -1,715 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Africannese Group | Building Africa Through Excellence</title>
-
-<meta name="description" content="Africannese Group — Steelworks, Construction, Corporate Wear and Digital Branding. Building Africa Through Excellence.">
-
-<style>
-
-/* =========================================================
-   AFRICANNESE GROUP — PREMIUM HOMEPAGE
-   ========================================================= */
-
-:root{
-    --black:#080808;
-    --black-soft:#101010;
-    --panel:#151515;
-    --white:#f5f4ef;
-    --muted:#929292;
-    --line:rgba(255,255,255,.10);
-    --yellow:#f5c900;
-    --yellow-bright:#ffd51a;
-    --turquoise:#19aaa4;
-    --pink:#c89aaa;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:var(--black);
-    color:var(--white);
-    font-family:Arial,Helvetica,sans-serif;
-    line-height:1.5;
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button{
-    font-family:inherit;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.header{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    z-index:100;
-    padding:30px 5.5%;
-}
-
-.header-inner{
-    max-width:1380px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.wordmark{
-    display:flex;
-    flex-direction:column;
-    line-height:1;
-}
-
-.wordmark-main{
-    font-size:21px;
-    font-weight:900;
-    letter-spacing:4px;
-}
-
-.wordmark-sub{
-    margin-top:7px;
-    color:var(--yellow);
-    font-size:8px;
-    font-weight:900;
-    letter-spacing:5px;
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.nav a{
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    color:#b7b7b7;
-    transition:.25s ease;
-}
-
-.nav a:hover{
-    color:#fff;
-}
-
-.nav-quote{
-    border:1px solid var(--yellow);
-    padding:12px 18px;
-    color:var(--yellow)!important;
-}
-
-.nav-quote:hover{
-    background:var(--yellow);
-    color:#000!important;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero{
-    min-height:780px;
-    height:100vh;
-    max-height:960px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    background:#080808;
-    overflow:hidden;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    right:-250px;
-    top:80px;
-    width:650px;
-    height:650px;
-    border:1px solid rgba(245,201,0,.10);
-    border-radius:50%;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    right:-100px;
-    bottom:-300px;
-    width:750px;
-    height:750px;
-    border:1px solid rgba(255,255,255,.045);
-    border-radius:50%;
-}
-
-.hero-inner{
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:1380px;
-    margin:auto;
-    padding:130px 5.5% 70px;
-}
-
-.hero-top{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:25px;
-}
-
-.hero-line{
-    width:38px;
-    height:2px;
-    background:var(--yellow);
-}
-
-.hero-category{
-    color:var(--yellow);
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
-
-.hero-title{
-    max-width:980px;
-    font-size:clamp(55px,7.3vw,108px);
-    line-height:.91;
-    letter-spacing:-5px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.hero-title .accent{
-    color:var(--yellow);
-}
-
-.hero-bottom{
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-    gap:60px;
-    margin-top:38px;
-}
-
-.hero-description{
-    max-width:570px;
-    color:#929292;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.hero-actions{
-    display:flex;
-    gap:12px;
-    flex-shrink:0;
-}
-
-.btn{
-    min-height:50px;
-    padding:0 24px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    transition:.25s ease;
-}
-
-.btn-yellow{
-    background:var(--yellow);
-    color:#080808;
-}
-
-.btn-yellow:hover{
-    background:#fff;
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.28);
-    color:#fff;
-}
-
-.btn-outline:hover{
-    border-color:var(--yellow);
-    color:var(--yellow);
-}
-
-
-/* =========================================================
-   INTRO STRIP
-   ========================================================= */
-
-.intro{
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    background:#0d0d0d;
-}
-
-.intro-inner{
-    max-width:1380px;
-    margin:auto;
-    padding:35px 5.5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-}
-
-.intro-label{
-    color:var(--yellow);
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:2.5px;
-    text-transform:uppercase;
-}
-
-.intro-text{
-    max-width:700px;
-    color:#888;
-    font-size:12px;
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   DIVISIONS
-   ========================================================= */
-
-.divisions{
-    padding:120px 5.5%;
-    background:#080808;
-}
-
-.divisions-inner{
-    max-width:1380px;
-    margin:auto;
-}
-
-.section-heading{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:50px;
-    margin-bottom:55px;
-}
-
-.section-kicker{
-    color:var(--yellow);
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.section-title{
-    font-size:clamp(38px,4.8vw,67px);
-    line-height:.96;
-    letter-spacing:-3px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.section-note{
-    max-width:330px;
-    color:#777;
-    font-size:12px;
-    line-height:1.8;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.card{
-    min-height:510px;
-    position:relative;
-    padding:32px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    overflow:hidden;
-    transition:.35s ease;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-}
-
-.card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:3px;
-}
-
-.card::after{
-    content:"";
-    position:absolute;
-    width:300px;
-    height:300px;
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:50%;
-    top:-160px;
-    right:-120px;
-}
-
-.card-top{
-    position:absolute;
-    left:32px;
-    right:32px;
-    top:30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.card-label{
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.card-mark{
-    width:34px;
-    height:34px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid currentColor;
-    font-size:12px;
-    font-weight:900;
-}
-
-.card h3{
-    position:relative;
-    z-index:2;
-    font-size:39px;
-    line-height:.98;
-    letter-spacing:-2px;
-    text-transform:uppercase;
-    font-weight:900;
-}
-
-.card p{
-    position:relative;
-    z-index:2;
-    margin-top:20px;
-    max-width:390px;
-    font-size:12px;
-    line-height:1.8;
-}
-
-.card-link{
-    position:relative;
-    z-index:2;
-    width:max-content;
-    margin-top:27px;
-    padding-top:15px;
-    border-top:1px solid rgba(255,255,255,.25);
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.card-link span{
-    margin-left:10px;
-    transition:.25s ease;
-}
-
-.card:hover .card-link span{
-    margin-left:17px;
-}
-
-
-/* STEELWORKS */
-
-.card-steel{
-    background:#151515;
-    border:1px solid rgba(245,201,0,.28);
-}
-
-.card-steel::before{
-    background:var(--yellow);
-}
-
-.card-steel .card-label{
-    color:var(--yellow);
-}
-
-.card-steel p{
-    color:#929292;
-}
-
-
-/* CORPORATE WEAR */
-
-.card-wear{
-    background:var(--turquoise);
-    border:1px solid rgba(255,255,255,.20);
-}
-
-.card-wear::before{
-    background:#fff;
-}
-
-.card-wear p{
-    color:rgba(255,255,255,.78);
-}
-
-
-/* DIGITAL */
-
-.card-digital{
-    background:var(--pink);
-    color:#111;
-    border:1px solid rgba(255,255,255,.20);
-}
-
-.card-digital::before{
-    background:#111;
-}
-
-.card-digital p{
-    color:rgba(17,17,17,.70);
-}
-
-.card-digital .card-link{
-    border-color:rgba(17,17,17,.25);
-}
-
-
-/* =========================================================
-   ABOUT / STANDARD
-   ========================================================= */
-
-.standard{
-    padding:110px 5.5%;
-    background:#ecebe6;
-    color:#101010;
-}
-
-.standard-inner{
-    max-width:1380px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:100px;
-    align-items:center;
-}
-
-.standard .section-kicker{
-    color:#111;
-}
-
-.standard .section-title{
-    max-width:600px;
-}
-
-.standard-copy{
-    max-width:520px;
-    color:#666;
-    font-size:14px;
-    line-height:1.9;
-    margin-top:25px;
-}
-
-.standard-list{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    border-top:1px solid #ccc;
-    border-left:1px solid #ccc;
-}
-
-.standard-item{
-    padding:32px;
-    min-height:145px;
-    border-right:1px solid #ccc;
-    border-bottom:1px solid #ccc;
-}
-
-.standard-item strong{
-    display:block;
-    font-size:30px;
-    font-weight:900;
-}
-
-.standard-item span{
-    display:block;
-    margin-top:10px;
-    color:#777;
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
-.cta{
-    padding:110px 5.5%;
-    background:var(--yellow);
-    color:#080808;
-}
-
-.cta-inner{
-    max-width:1380px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
-}
-
-.cta h2{
-    max-width:800px;
-    font-size:clamp(40px,5vw,70px);
-    line-height:.95;
-    letter-spacing:-3px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.cta p{
-    margin-top:18px;
-    max-width:580px;
-    color:rgba(0,0,0,.62);
-    font-size:13px;
-}
-
-.cta-btn{
-    flex-shrink:0;
-    background:#080808;
-    color:#fff;
-    padding:18px 25px;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    transition:.25s ease;
-}
-
-.cta-btn:hover{
-    background:#fff;
-    color:#080808;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer{
-    background:#050505;
-    padding:70px 5.5% 25px;
-}
-
-.footer-inner{
-    max-width:1380px;
-    margin:auto;
-}
-
-.footer-main{
-    display:grid;
-    grid-template-columns:1.4fr .7fr .9fr;
-    gap:70px;
-    padding-bottom:55px;
-    border-bottom:1px solid var(--line);
-}
-
-.footer-brand h2{
-    font-size:23px;
-    letter-spacing:3px;
-    font-weight:900;
-}
-
-.footer-brand h2 span{
-    color:var(--yellow);
-}
-
-.footer-brand p{
-    max-width:420px;
-    margin-top:17px;
-    color:#777;
-    font-size:12px;
-    line-height:1.8;
-}
-
-.footer-column h4{
-    margin-bottom:20px;
-    color:var(--yellow);
-    font-size:9px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.footer-column a,
-.footer-column p{
-    display:block;
-    margin-bottom:10px;
-    color:#777;
-    font-size:11px;
-}
-
-.footer-column a:hover{
-    color:#fff;
-}
-
-.footer-bottom{
-    padding-top:22px;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    color:#4f4f4f;
-    font-size:8px;
-    font-weight:700;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-
-/* =========================================================
-   WHATSAPP
-   ========================================================= */
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:55px
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africannese Group</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 30px 6%;
+            border-bottom: 1px solid #222;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 4px;
+        }
+
+        .brand span {
+            display: block;
+            margin-top: 5px;
+            color: #f5c900;
+            font-size: 8px;
+            letter-spacing: 5px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            padding: 110px 6%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+        }
+
+        .label {
+            color: #f5c900;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 8vw, 100px);
+            line-height: .95;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: #f5c900;
+        }
+
+        p {
+            max-width: 600px;
+            margin-top: 30px;
+            color: #999;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .button {
+            padding: 16px 24px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .yellow {
+            background: #f5c900;
+            color: #000;
+        }
+
+        .outline {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        @media(max-width:600px) {
+            .hero {
+                min-height: 75vh;
+                padding: 80px 6%;
+            }
+
+            h1 {
+                font-size: 52px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .button {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        AFRICANNESE
+        <span>GROUP</span>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="label">
+            ENGINEERING • CONSTRUCTION • BRANDING
+        </div>
+
+        <h1>
+            Building Africa<br>
+            Through <span>Excellence.</span>
+        </h1>
+
+        <p>
+            Professional steelworks, construction, corporate wear,
+            digital branding and business solutions delivered with
+            precision, quality and purpose.
+        </p>
+
+        <div class="buttons">
+
+            <a href="quote.html" class="button yellow">
+                Request a Quote
+            </a>
+
+            <a href="projects.html" class="button outline">
+                View Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
