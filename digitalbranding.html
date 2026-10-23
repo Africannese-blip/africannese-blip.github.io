@@ -2,108 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <title>Africannese Digital Branding | Branding Africa to Compete Globally</title>
 
-    <meta name="description" content="Africannese Digital Branding provides professional branding, website design, company profiles, business documents, social media design and printing solutions.">
-    <meta name="theme-color" content="#171219">
+    <meta name="description"
+          content="Africannese Digital Branding provides professional branding, website design, company profiles, business documents, social media design and printing solutions.">
 
     <link rel="stylesheet" href="digitalbranding.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
+<!-- =====================================================
+     HEADER
+===================================================== -->
 <header class="db-header">
 
-    <div class="db-container db-nav">
+    <div class="db-container db-header-inner">
 
-        <a href="index.html" class="db-brand">
-            <span class="db-brand-name">AFRICANNESE</span>
-            <span class="db-brand-sub">DIGITAL BRANDING</span>
+        <a href="index.html" class="db-logo">
+            <span class="db-logo-main">AFRICANNESE</span>
+            <span class="db-logo-sub">DIGITAL BRANDING</span>
         </a>
 
-        <nav class="db-menu">
+        <button class="db-menu-toggle"
+                type="button"
+                aria-label="Open navigation"
+                onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="db-nav" id="dbNav">
             <a href="index.html">Home</a>
             <a href="#services">Services</a>
             <a href="#process">Process</a>
             <a href="#packages">Packages</a>
-            <a href="contact.html" class="db-nav-button">Contact</a>
+            <a href="quote.html" class="db-nav-cta">Get a Quote</a>
         </nav>
-
-        <button class="db-menu-toggle" aria-label="Open menu">
-            <span></span>
-            <span></span>
-        </button>
 
     </div>
 
 </header>
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
 <main>
-
-<!-- ================= HERO ================= -->
 
 <section class="db-hero">
 
-    <div class="db-hero-shape db-shape-one"></div>
-    <div class="db-hero-shape db-shape-two"></div>
+    <div class="db-container">
 
-    <div class="db-container db-hero-grid">
+        <div class="db-hero-grid">
 
-        <div class="db-hero-content">
+            <div class="db-hero-content">
 
-            <p class="db-eyebrow">
-                AFRICANNESE DIGITAL BRANDING
-            </p>
+                <div class="db-eyebrow">
+                    AFRICANNESE DIGITAL BRANDING
+                </div>
 
-            <h1>
-                Branding Africa
-                <span>to Compete Globally.</span>
-            </h1>
+                <h1>
+                    Branding Africa
+                    <span>to Compete Globally.</span>
+                </h1>
 
-            <p class="db-hero-text">
-                We build professional brands, digital experiences and business
-                communication materials designed to make your organisation
-                look credible, established and ready for growth.
-            </p>
+                <p class="db-hero-text">
+                    We build professional brands, digital experiences and
+                    business communication materials designed to make your
+                    organisation look credible, established and ready for
+                    growth.
+                </p>
 
-            <div class="db-hero-actions">
-                <a href="quote.html" class="db-button db-button-dark">
-                    Start a Project
-                    <span>↗</span>
-                </a>
+                <p class="db-hero-text db-hero-text-small">
+                    From your logo and company profile to your website,
+                    proposals and marketing materials, we create branding
+                    solutions around your business, your audience and your
+                    ambitions.
+                </p>
 
-                <a href="#services" class="db-text-link">
-                    Explore our services
-                    <span>↓</span>
-                </a>
+                <div class="db-hero-buttons">
+                    <a href="#services" class="db-btn db-btn-pink">
+                        Explore Services
+                    </a>
+
+                    <a href="quote.html" class="db-btn db-btn-outline">
+                        Request a Quote
+                    </a>
+                </div>
+
             </div>
 
-        </div>
 
-        <div class="db-hero-visual">
+            <!-- DESKTOP VISUAL -->
+            <div class="db-hero-visual">
 
-            <div class="db-visual-card">
+                <div class="db-visual-card">
 
-                <div class="db-visual-top">
-                    <span>BRAND</span>
-                    <span>01 / 04</span>
-                </div>
+                    <div class="db-visual-top">
+                        AFRICANNESE
+                    </div>
 
-                <div class="db-visual-center">
-                    <div class="db-orbit"></div>
-                    <strong>BUILD</strong>
-                    <strong>BETTER.</strong>
-                </div>
+                    <div class="db-visual-title">
+                        BUILD<br>
+                        YOUR<br>
+                        <span>BRAND.</span>
+                    </div>
 
-                <div class="db-visual-bottom">
-                    <span>STRATEGY</span>
-                    <span>IDENTITY</span>
-                    <span>DIGITAL</span>
+                    <div class="db-visual-bottom">
+                        BRANDING • DIGITAL • PRINT
+                    </div>
+
                 </div>
 
             </div>
@@ -115,27 +129,48 @@
 </section>
 
 
-<!-- ================= INTRO ================= -->
-
+<!-- =====================================================
+     INTRO
+===================================================== -->
 <section class="db-intro">
 
-    <div class="db-container db-intro-grid">
+    <div class="db-container">
 
-        <div>
-            <p class="db-section-label">OUR APPROACH</p>
-        </div>
+        <div class="db-intro-grid">
 
-        <div>
-            <h2>
-                Your business deserves
-                <em>a brand that means business.</em>
-            </h2>
+            <div>
+                <span class="db-section-number">01 / INTRODUCTION</span>
 
-            <p class="db-large-copy">
-                From your first logo to your complete digital presence,
-                we create practical branding solutions around your business,
-                your audience and your ambitions.
-            </p>
+                <h2>
+                    Your business
+                    deserves a
+                    <span>professional identity.</span>
+                </h2>
+            </div>
+
+            <div class="db-intro-copy">
+
+                <p>
+                    A strong brand does more than look good. It tells people
+                    who you are, what you stand for and why they should
+                    trust your business.
+                </p>
+
+                <p>
+                    Africannese Digital Branding helps businesses,
+                    entrepreneurs, organisations and growing brands
+                    communicate professionally across digital and physical
+                    platforms.
+                </p>
+
+                <p>
+                    We combine creative design with practical business
+                    communication to create materials that are professional,
+                    consistent and ready to use.
+                </p>
+
+            </div>
+
         </div>
 
     </div>
@@ -143,8 +178,9 @@
 </section>
 
 
-<!-- ================= SERVICES ================= -->
-
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 <section class="db-services" id="services">
 
     <div class="db-container">
@@ -152,7 +188,7 @@
         <div class="db-section-heading">
 
             <div>
-                <p class="db-section-label">WHAT WE DO</p>
+                <span class="db-section-number">02 / WHAT WE DO</span>
 
                 <h2>
                     Everything your
@@ -162,7 +198,8 @@
 
             <p>
                 Professional creative and business communication solutions
-                for companies, entrepreneurs, organisations and growing brands.
+                for companies, entrepreneurs, organisations and growing
+                brands.
             </p>
 
         </div>
@@ -170,51 +207,407 @@
 
         <div class="db-service-grid">
 
-            <!-- SERVICE 1 -->
 
-            <article class="db-service-card db-service-featured">
+            <!-- SERVICE 1 -->
+            <article class="db-service-card">
 
                 <div class="db-service-number">01</div>
 
-                <div class="db-service-icon">
-                    ✦
-                </div>
+                <div class="db-service-icon">✦</div>
 
-                <div class="db-service-content">
+                <h3>Brand Identity</h3>
 
-                    <h3>Brand Identity</h3>
+                <p>
+                    Build a recognisable identity that gives your business
+                    a professional and consistent presence.
+                </p>
 
-                    <p>
-                        Build a recognisable identity that gives your business
-                        a professional and consistent presence.
-                    </p>
-
-                    <ul>
-                        <li>Logo design</li>
-                        <li>Colour direction</li>
-                        <li>Typography</li>
-                        <li>Brand identity</li>
-                        <li>Brand guidelines</li>
-                    </ul>
-
-                </div>
+                <ul>
+                    <li>Logo design</li>
+                    <li>Colour direction</li>
+                    <li>Typography</li>
+                    <li>Brand identity</li>
+                    <li>Brand guidelines</li>
+                </ul>
 
             </article>
 
 
             <!-- SERVICE 2 -->
-
             <article class="db-service-card">
 
                 <div class="db-service-number">02</div>
 
-                <div class="db-service-icon">
-                    ◇
+                <div class="db-service-icon">◇</div>
+
+                <h3>Website Design</h3>
+
+                <p>
+                    Professional websites designed to establish credibility
+                    and help your business compete online.
+                </p>
+
+                <ul>
+                    <li>Business websites</li>
+                    <li>Mobile responsive design</li>
+                    <li>Landing pages</li>
+                    <li>Domain setup guidance</li>
+                    <li>Website maintenance</li>
+                </ul>
+
+            </article>
+
+
+            <!-- SERVICE 3 -->
+            <article class="db-service-card">
+
+                <div class="db-service-number">03</div>
+
+                <div class="db-service-icon">▣</div>
+
+                <h3>Company Profiles</h3>
+
+                <p>
+                    Professional company profiles that clearly communicate
+                    your capabilities, services and business credibility.
+                </p>
+
+                <ul>
+                    <li>Company profile design</li>
+                    <li>Business descriptions</li>
+                    <li>Services presentation</li>
+                    <li>Project portfolios</li>
+                    <li>Corporate profiles</li>
+                </ul>
+
+            </article>
+
+
+            <!-- SERVICE 4 -->
+            <article class="db-service-card">
+
+                <div class="db-service-number">04</div>
+
+                <div class="db-service-icon">◆</div>
+
+                <h3>Business Documents</h3>
+
+                <p>
+                    Professional documents designed to help businesses
+                    communicate, apply, pitch and operate with confidence.
+                </p>
+
+                <ul>
+                    <li>Business plans</li>
+                    <li>Funding proposals</li>
+                    <li>Quotations</li>
+                    <li>Invoices</li>
+                    <li>Capability statements</li>
+                </ul>
+
+            </article>
+
+
+            <!-- SERVICE 5 -->
+            <article class="db-service-card">
+
+                <div class="db-service-number">05</div>
+
+                <div class="db-service-icon">✧</div>
+
+                <h3>Social Media Design</h3>
+
+                <p>
+                    Professional digital graphics that keep your business
+                    visible, consistent and recognisable.
+                </p>
+
+                <ul>
+                    <li>Social media posters</li>
+                    <li>Promotional graphics</li>
+                    <li>Campaign artwork</li>
+                    <li>Digital advertisements</li>
+                    <li>Business announcements</li>
+                </ul>
+
+            </article>
+
+
+            <!-- SERVICE 6 -->
+            <article class="db-service-card">
+
+                <div class="db-service-number">06</div>
+
+                <div class="db-service-icon">▤</div>
+
+                <h3>Printing & Marketing</h3>
+
+                <p>
+                    Turn your digital brand into professional physical
+                    marketing materials that represent your business well.
+                </p>
+
+                <ul>
+                    <li>Business cards</li>
+                    <li>Flyers</li>
+                    <li>Brochures</li>
+                    <li>Posters</li>
+                    <li>Marketing materials</li>
+                </ul>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BRAND STATEMENT
+===================================================== -->
+<section class="db-statement">
+
+    <div class="db-container">
+
+        <span class="db-section-number">03 / OUR BELIEF</span>
+
+        <h2>
+            AFRICA IS BUILDING.
+            <span>YOUR BRAND SHOULD BE READY.</span>
+        </h2>
+
+        <p>
+            Whether you are launching a new business, expanding an existing
+            company or preparing to compete for bigger opportunities, your
+            brand should communicate professionalism from the first
+            impression.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAPABILITIES
+===================================================== -->
+<section class="db-capabilities">
+
+    <div class="db-container">
+
+        <div class="db-cap-grid">
+
+            <div class="db-cap-title">
+
+                <span class="db-section-number">04 / CAPABILITIES</span>
+
+                <h2>
+                    Built around
+                    <span>your business.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="db-cap-list">
+
+                <div class="db-cap-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Startups</h3>
+                        <p>
+                            Build a professional identity from the ground up.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="db-service-content">
+                <div class="db-cap-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Established Businesses</h3>
+                        <p>
+                            Refresh and strengthen an existing brand.
+                        </p>
+                    </div>
+                </div>
 
-                    <h3>Website Design</h3>
+                <div class="db-cap-item">
+                    <span>03</span>
+                    <div>
+                        <h3>NPOs & Organisations</h3>
+                        <p>
+                            Communicate your mission professionally and clearly.
+                        </p>
+                    </div>
+                </div>
 
-                    <p>
-                        Professional websites
+                <div class="db-cap-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Fundraising & Proposals</h3>
+                        <p>
+                            Present your organisation professionally to funders
+                            and partners.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+<section class="db-process" id="process">
+
+    <div class="db-container">
+
+        <div class="db-process-heading">
+
+            <span class="db-section-number">05 / OUR PROCESS</span>
+
+            <h2>
+                From idea
+                <span>to execution.</span>
+            </h2>
+
+            <p>
+                A straightforward process designed to keep your project
+                focused, professional and efficient.
+            </p>
+
+        </div>
+
+
+        <div class="db-process-grid">
+
+            <div class="db-process-step">
+                <span>01</span>
+                <h3>Discover</h3>
+                <p>
+                    We understand your business, audience, goals and
+                    requirements.
+                </p>
+            </div>
+
+            <div class="db-process-step">
+                <span>02</span>
+                <h3>Develop</h3>
+                <p>
+                    We develop the visual direction and communication
+                    materials around your objectives.
+                </p>
+            </div>
+
+            <div class="db-process-step">
+                <span>03</span>
+                <h3>Refine</h3>
+                <p>
+                    We review the work and refine the details until the
+                    direction is right.
+                </p>
+            </div>
+
+            <div class="db-process-step">
+                <span>04</span>
+                <h3>Deliver</h3>
+                <p>
+                    You receive professional, practical and ready-to-use
+                    brand assets.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PACKAGES
+===================================================== -->
+<section class="db-packages" id="packages">
+
+    <div class="db-container">
+
+        <div class="db-section-heading db-packages-heading">
+
+            <div>
+                <span class="db-section-number">06 / PACKAGES</span>
+
+                <h2>
+                    Choose your
+                    <span>starting point.</span>
+                </h2>
+            </div>
+
+            <p>
+                Flexible solutions for businesses at different stages of
+                development.
+            </p>
+
+        </div>
+
+
+        <div class="db-package-grid">
+
+
+            <article class="db-package">
+
+                <span class="db-package-label">STARTER</span>
+
+                <h3>Get Started</h3>
+
+                <p>
+                    For entrepreneurs and new businesses that need a
+                    professional foundation.
+                </p>
+
+                <ul>
+                    <li>Professional logo</li>
+                    <li>Business poster</li>
+                    <li>Basic brand direction</li>
+                    <li>Digital artwork</li>
+                </ul>
+
+                <a href="quote.html">Request Package →</a>
+
+            </article>
+
+
+            <article class="db-package db-package-featured">
+
+                <span class="db-package-label">BUSINESS</span>
+
+                <h3>Build Your Brand</h3>
+
+                <p>
+                    A stronger branding solution for businesses ready to
+                    present themselves professionally.
+                </p>
+
+                <ul>
+                    <li>Logo design</li>
+                    <li>Company profile</li>
+                    <li>Business cards</li>
+                    <li>Professional email guidance</li>
+                    <li>Digital branding assets</li>
+                </ul>
+
+                <a href="quote.html">Request Package →</a>
+
+            </article>
+
+
+            <article class="db-package">
+
+                <span class="db-package-label">PROFESS
