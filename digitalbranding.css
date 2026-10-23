@@ -1,7 +1,32 @@
 /* =========================================================
    AFRICANNESE DIGITAL BRANDING
-   PREMIUM EDITORIAL CORPORATE DESIGN
-========================================================= */
+   PREMIUM CREATIVE AGENCY WEBSITE
+   ========================================================= */
+
+:root {
+    --black: #171219;
+    --black-soft: #211a21;
+    --black-light: #2b222b;
+
+    --pink: #dfa0bd;
+    --pink-dark: #c982a5;
+    --pink-light: #f5e8ee;
+    --pink-pale: #faf3f6;
+
+    --white: #ffffff;
+    --off-white: #f7f4f5;
+
+    --grey: #a79fa5;
+    --grey-dark: #625b61;
+
+    --line-dark: rgba(255,255,255,0.12);
+    --line-light: rgba(23,18,25,0.13);
+
+    --max-width: 1240px;
+}
+
+
+/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -14,11 +39,24 @@ html {
 }
 
 body {
-    background: #f7f1f4;
-    color: #171318;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--black);
+    color: var(--white);
+
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
@@ -26,1171 +64,183 @@ a {
     text-decoration: none;
 }
 
-:root {
-    --pink: #d7a0b7;
-    --pink-light: #f7f1f4;
-    --pink-dark: #a75d7b;
-    --black: #171318;
-    --dark: #211b20;
-    --muted: #70666c;
-    --white: #ffffff;
-    --line: rgba(23,19,24,0.15);
-    --max: 1280px;
+button {
+    font: inherit;
 }
 
 .db-container {
-    width: min(var(--max), calc(100% - 80px));
+    width: min(calc(100% - 80px), var(--max-width));
     margin: 0 auto;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 
 .db-header {
-    background: var(--black);
-    color: white;
-    border-bottom: 1px solid #302930;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
 .db-nav {
-    min-height: 88px;
+    height: 94px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 35px;
 }
 
 .db-brand {
     display: flex;
     flex-direction: column;
-
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 3px;
+    line-height: 1;
 }
 
-.db-brand small {
-    margin-top: 5px;
+.db-brand-name {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.db-brand-sub {
+    margin-top: 7px;
 
     color: var(--pink);
+
     font-size: 8px;
-    letter-spacing: 3px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
 }
 
-.db-nav nav {
+.db-menu {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 34px;
 }
 
-.db-nav nav a {
-    color: #aaa;
+.db-menu a {
+    color: #d8d1d6;
 
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
 
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
 
-.db-nav nav a:hover {
-    color: white;
+.db-menu a:hover {
+    color: var(--pink);
 }
 
 .db-nav-button {
-    padding: 14px 20px;
+    padding: 12px 20px;
 
-    background: var(--pink);
-    color: var(--black);
+    border: 1px solid rgba(255,255,255,0.25);
 
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
+    color: var(--white) !important;
 
     transition: 0.25s ease;
 }
 
 .db-nav-button:hover {
-    background: white;
+    background: var(--pink);
+    border-color: var(--pink);
+
+    color: var(--black) !important;
+}
+
+.db-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    cursor: pointer;
+}
+
+.db-menu-toggle span {
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: var(--white);
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+/* ================= HERO ================= */
 
 .db-hero {
-    min-height: 720px;
+    position: relative;
+
+    min-height: 760px;
 
     display: flex;
     align-items: center;
 
-    background: var(--pink);
-    color: var(--black);
-
     overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 82% 45%,
+            rgba(223,160,189,0.16),
+            transparent 27%
+        ),
+        var(--black);
 }
 
 .db-hero-grid {
     display: grid;
-    grid-template-columns: 1.4fr 0.6fr;
-    gap: 80px;
+
+    grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
+
+    gap: 100px;
+
+    padding-top: 100px;
 }
 
 .db-eyebrow {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 4px;
+    color: var(--pink);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.25em;
 }
 
 .db-hero h1 {
-    max-width: 850px;
+    max-width: 760px;
 
-    font-size: clamp(58px, 8vw, 115px);
-    line-height: 0.88;
-    letter-spacing: -5px;
-    font-weight: 900;
+    font-size: clamp(54px, 6vw, 88px);
+
+    line-height: 0.98;
+
+    font-weight: 750;
+
+    letter-spacing: -0.055em;
 }
 
 .db-hero h1 span {
     display: block;
-    color: white;
-}
-
-.db-hero-description {
-    max-width: 650px;
-
-    margin-top: 40px;
-
-    color: rgba(23,19,24,0.7);
-
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.db-actions {
-    display: flex;
-    gap: 12px;
-
-    margin-top: 38px;
-}
-
-.db-button {
-    min-height: 56px;
-
-    padding: 0 25px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1.7px;
-
-    transition: 0.25s ease;
-}
-
-.db-button span {
-    font-size: 19px;
-}
-
-.db-button-dark {
-    background: var(--black);
-    color: white;
-}
-
-.db-button-dark:hover {
-    background: white;
-    color: var(--black);
-    transform: translateY(-3px);
-}
-
-.db-button-outline {
-    border: 1px solid rgba(23,19,24,0.5);
-}
-
-.db-button-outline:hover {
-    background: var(--black);
-    color: white;
-}
-
-.db-hero-panel {
-    min-height: 440px;
-
-    padding: 40px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    background: rgba(23,19,24,0.08);
-
-    border: 1px solid rgba(23,19,24,0.2);
-
-    position: relative;
-}
-
-.panel-label {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.panel-word {
-    font-size: clamp(55px, 7vw, 95px);
-    line-height: 0.8;
-    font-weight: 900;
-    letter-spacing: -5px;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-
-.panel-line {
-    width: 45px;
-    height: 4px;
-
-    margin-top: 25px;
-
-    background: var(--black);
-}
-
-.db-hero-panel p {
-    margin-top: 20px;
-
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.db-intro {
-    padding: 130px 0;
-
-    background: var(--pink-light);
-}
-
-.db-section-tag {
-    color: var(--pink-dark);
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.db-intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-
-    margin-top: 50px;
-}
-
-.db-intro h2 {
-    max-width: 600px;
-
-    font-size: clamp(45px, 6vw, 76px);
-    line-height: 0.95;
-    letter-spacing: -3px;
-}
-
-.db-intro h2 span {
-    color: var(--pink-dark);
-}
-
-.db-intro-grid > div {
-    max-width: 600px;
-}
-
-.db-large-text {
-    margin-bottom: 25px;
-
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 600;
-}
-
-.db-intro-grid p:not(.db-large-text) {
-    margin-top: 15px;
-
-    color: var(--muted);
-
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.db-services {
-    padding: 130px 0;
-
-    background: var(--black);
-    color: white;
-}
-
-.db-section-header {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 80px;
-
-    align-items: end;
-}
-
-.db-section-header h2 {
-    margin-top: 25px;
-
-    font-size: clamp(48px, 6vw, 76px);
-    line-height: 0.92;
-    letter-spacing: -3px;
-}
-
-.db-section-header > p {
-    color: #8f888d;
-
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.db-service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    margin-top: 65px;
-
-    border-top: 1px solid #302b2f;
-    border-left: 1px solid #302b2f;
-}
-
-.db-service-card {
-    min-height: 460px;
-
-    padding: 32px;
-
-    border-right: 1px solid #302b2f;
-    border-bottom: 1px solid #302b2f;
-
-    position: relative;
-
-    transition: 0.3s ease;
-}
-
-.db-service-card:hover {
-    background: #211d20;
-}
-
-.service-number {
     color: var(--pink);
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
 }
 
-.service-icon {
-    margin-top: 65px;
-
-    color: var(--pink);
-
-    font-size: 35px;
-}
-
-.db-service-card h3 {
-    margin-top: 20px;
-
-    font-size: 27px;
-    line-height: 1.1;
-    letter-spacing: -1px;
-}
-
-.db-service-card > p {
-    margin-top: 18px;
-
-    color: #8d878b;
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-.db-service-card ul {
-    margin-top: 20px;
-    padding-left: 18px;
-
-    color: #aaa;
-
-    font-size: 12px;
-    line-height: 2;
-}
-
-
-/* =========================================================
-   STATEMENT
-========================================================= */
-
-.db-statement {
-    padding: 150px 0;
-
-    background: var(--pink);
-    color: var(--black);
-}
-
-.statement-top {
-    margin-bottom: 30px;
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 4px;
-}
-
-.db-statement h2 {
-    max-width: 1050px;
-
-    font-size: clamp(55px, 9vw, 125px);
-    line-height: 0.84;
-    letter-spacing: -6px;
-}
-
-.db-statement h2 span {
-    display: block;
-    color: white;
-}
-
-.db-statement p {
-    max-width: 600px;
-
-    margin-top: 45px;
-
-    color: rgba(23,19,24,0.7);
-
-    font-size: 19px;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   PROCESS
-========================================================= */
-
-.db-process {
-    padding: 130px 0;
-
-    background: var(--pink-light);
-}
-
-.db-process-header {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 100px;
+.db-hero-text {
+    max-width: 610px;
 
     margin-top: 35px;
 
-    align-items: end;
-}
-
-.db-process-header h2 {
-    font-size: clamp(50px, 6vw, 78px);
-    line-height: 0.9;
-    letter-spacing: -4px;
-}
-
-.db-process-header h2 span {
-    color: var(--pink-dark);
-}
-
-.db-process-header p {
-    color: var(--muted);
-
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.db-process-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    margin-top: 70px;
-
-    border-top: 1px solid var(--line);
-}
-
-.db-process-step {
-    min-height: 270px;
-
-    padding: 30px;
-
-    border-right: 1px solid var(--line);
-}
-
-.db-process-step:first-child {
-    border-left: 1px solid var(--line);
-}
-
-.db-process-step > span {
-    color: var(--pink-dark);
-
-    font-size: 11px;
-    font-weight: 900;
-}
-
-.db-process-step h3 {
-    margin-top: 65px;
-
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.db-process-step p {
-    margin-top: 13px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   PACKAGES
-========================================================= */
-
-.db-packages {
-    padding: 130px 0;
-
-    background: #211b20;
-    color: white;
-}
-
-.db-package-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    margin-top: 65px;
-}
-
-.db-package {
-    min-height: 500px;
-
-    padding: 40px;
-
-    border: 1px solid #393238;
-    border-right: none;
-
-    position: relative;
-}
-
-.db-package:last-child {
-    border-right: 1px solid #393238;
-}
-
-.featured-package {
-    background: var(--pink);
-    color: var(--black);
-
-    border-color: var(--pink);
-}
-
-.package-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    padding: 10px 15px;
-
-    background: var(--black);
-    color: white;
-
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-}
-
-.package-name {
-    color: var(--pink);
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.featured-package .package-name {
-    color: var(--black);
-}
-
-.db-package h3 {
-    margin-top: 45px;
-
-    font-size: 31px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-.db-package > p {
-    margin-top: 20px;
-
-    color: #999;
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-.featured-package > p {
-    color: rgba(0,0,0,0.65);
-}
-
-.db-package ul {
-    margin-top: 25px;
-    padding-left: 17px;
-
-    color: #aaa;
-
-    font-size: 12px;
-    line-height: 2;
-}
-
-.featured-package ul {
-    color: rgba(0,0,0,0.7);
-}
-
-.db-package > a {
-    position: absolute;
-    bottom: 35px;
-    left: 40px;
-
-    display: inline-flex;
-    gap: 20px;
-
-    padding-bottom: 7px;
-
-    border-bottom: 1px solid var(--pink);
-
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-}
-
-.featured-package > a {
-    border-color: var(--black);
-}
-
-.db-package > a span {
-    font-size: 17px;
-}
-
-.package-note {
-    margin-top: 25px;
-
-    color: #777;
-
-    font-size: 11px;
-}
-
-
-/* =========================================================
-   WHY US
-========================================================= */
-
-.db-why {
-    padding: 130px 0;
-
-    background: var(--pink-light);
-}
-
-.db-why-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 120px;
-}
-
-.db-why h2 {
-    margin-top: 30px;
-
-    font-size: clamp(50px, 6vw, 78px);
-    line-height: 0.9;
-    letter-spacing: -4px;
-}
-
-.db-why h2 span {
-    color: var(--pink-dark);
-}
-
-.db-why-list > div {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    column-gap: 25px;
-
-    padding: 30px 0;
-
-    border-top: 1px solid var(--line);
-}
-
-.db-why-list > div:last-child {
-    border-bottom: 1px solid var(--line);
-}
-
-.db-why-list strong {
-    color: var(--pink-dark);
-
-    font-size: 10px;
-}
-
-.db-why-list h3 {
-    font-size: 18px;
-}
-
-.db-why-list p {
-    grid-column: 2;
-
-    margin-top: 8px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.db-final-cta {
-    padding: 130px 0;
-
-    background: var(--black);
-    color: white;
-}
-
-.db-final-inner {
-    max-width: 900px;
-}
-
-.db-final-inner h2 {
-    margin-top: 35px;
-
-    font-size: clamp(60px, 9vw, 120px);
-    line-height: 0.85;
-    letter-spacing: -6px;
-}
-
-.db-final-inner h2 span {
-    display: block;
-    color: var(--pink);
-}
-
-.db-final-inner p {
-    max-width: 600px;
-
-    margin: 35px 0;
-
-    color: #999;
-
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.db-final-button {
-    min-height: 58px;
-
-    padding: 0 28px;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 25px;
-
-    background: var(--pink);
-    color: var(--black);
-
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
-
-    transition: 0.25s ease;
-}
-
-.db-final-button:hover {
-    background: white;
-    transform: translateY(-3px);
-}
-
-.db-final-button span {
-    font-size: 20px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.db-footer {
-    padding: 75px 0 25px;
-
-    background: #090809;
-    color: white;
-}
-
-.db-footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.4fr;
-
-    gap: 50px;
-
-    padding-bottom: 65px;
-}
-
-.db-footer-brand {
-    font-size: 23px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.db-footer-brand small {
-    display: block;
-
-    margin-top: 5px;
-
-    color: var(--pink);
-
-    font-size: 8px;
-    letter-spacing: 3px;
-}
-
-.db-footer-grid > div:first-child > p {
-    margin-top: 22px;
-
-    color: #777;
-
-    font-size: 13px;
-}
-
-.db-footer-grid h4 {
-    margin-bottom: 18px;
-
-    color: var(--pink);
-
-    font-size: 9px;
-    letter-spacing: 2px;
-}
-
-.db-footer-grid a,
-.db-footer-grid p {
-    display: block;
-
-    margin-bottom: 10px;
-
-    color: #777;
-
-    font-size: 12px;
-    line-height: 1.7;
-
-    transition: 0.2s ease;
-}
-
-.db-footer-grid a:hover {
-    color: white;
-}
-
-.db-footer-bottom {
-    padding-top: 22px;
-
-    display: flex;
-    justify-content: space-between;
-
-    border-top: 1px solid #242124;
-
-    color: #555;
-
-    font-size: 9px;
-}
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-.db-whatsapp {
-    position: fixed;
-
-    right: 22px;
-    bottom: 22px;
-
-    z-index: 100;
-
-    display: flex;
-    align-items: center;
-    gap: 9px;
-
-    padding: 14px 18px;
-
-    background: #25d366;
-    color: #06180d;
-
-    font-size: 9px;
-    letter-spacing: 1px;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
-
-    transition: 0.25s ease;
-}
-
-.db-whatsapp:hover {
-    transform: translateY(-4px);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    .db-container {
-        width: calc(100% - 50px);
-    }
-
-    .db-nav nav {
-        display: none;
-    }
-
-    .db-hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .db-hero-panel {
-        display: none;
-    }
-
-    .db-intro-grid,
-    .db-process-header,
-    .db-why-grid {
-        gap: 60px;
-    }
-
-    .db-service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .db-process-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .db-process-step:nth-child(3) {
-        border-left: 1px solid var(--line);
-    }
-
-    .db-package-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .db-package {
-        border-right: 1px solid #393238;
-        border-bottom: none;
-    }
-
-    .db-package:last-child {
-        border-bottom: 1px solid #393238;
-    }
-
-    .db-footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .db-container {
-        width: calc(100% - 40px);
-    }
-
-    .db-nav {
-        min-height: 75px;
-    }
-
-    .db-nav-button {
-        display: none;
-    }
-
-    .db-hero {
-        min-height: auto;
-    }
-
-    .db-hero-grid {
-        padding: 80px 0;
-    }
-
-    .db-eyebrow {
-        font-size: 8px;
-        letter-spacing: 2.5px;
-    }
-
-    .db-hero h1 {
-        font-size: clamp(50px, 15vw, 78px);
-        letter-spacing: -3px;
-    }
-
-    .db-hero-description {
-        margin-top: 30px;
-
-        font-size: 16px;
-    }
-
-    .db-actions {
-        flex-direction: column;
-    }
-
-    .db-button {
-        width: 100%;
-    }
-
-    .db-intro,
-    .db-services,
-    .db-process,
-    .db-packages,
-    .db-why,
-    .db-final-cta {
-        padding: 85px 0;
-    }
-
-    .db-intro-grid,
-    .db-section-header,
-    .db-process-header,
-    .db-why-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .db-intro h2,
-    .db-section-header h2,
-    .db-process-header h2,
-    .db-why h2 {
-        font-size: 48px;
-    }
-
-    .db-large-text {
-        font-size: 20px;
-    }
-
-    .db-service-grid {
-        grid-template-columns: 1fr;
-
-        margin-top: 45px;
-    }
-
-    .db-service-card {
-        min-height: 410px;
-    }
-
-    .db-statement {
-        padding: 90px 0;
-    }
-
-    .db-statement h2 {
-        font-size: 55px;
-        letter-spacing: -4px;
-    }
-
-    .db-process-grid {
-        grid-template-columns: 1fr;
-        margin-top: 45px;
-    }
-
-    .db-process-step {
-        min-height: auto;
-
-        border-left: 1px solid var(--line);
-    }
-
-    .db-process-step h3 {
-        margin-top: 35px;
-    }
-
-    .db-package {
-        min-height: 480px;
-    }
-
-    .db-final-inner h2 {
-        font-size: 60px;
-        letter-spacing: -4px;
-    }
-
-    .db-footer-grid {
-        grid-template-columns: 1fr;
-        gap: 38px;
-    }
-
-    .db-footer-bottom {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .db-whatsapp {
-        width: 53px;
-        height: 53px;
-
-        padding: 0;
-
-        justify-content: center;
-
-        border-radius: 50%;
-    }
-
-    .db-whatsapp b {
-        display: none;
-    }
-
-    .db-whatsapp span {
-        font-size: 22px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-
-    .db-container {
-        width: calc(100% - 30px);
-    }
-
-    .db-hero h1 {
-        font-size: 46px;
-    }
-
-    .db-intro h2,
-    .db-section-header h2,
-    .db-process-header h2,
-    .db-why h2 {
-        font-size: 43px;
-    }
-
-    .db-final-inner h2 {
-        font-size: 53px;
-    }
-
-}
+    color: #
