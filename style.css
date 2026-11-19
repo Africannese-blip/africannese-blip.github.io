@@ -1,1537 +1,331 @@
+/* =====================================================
+   AFRICANNESE GROUP - MAIN STYLESHEET
+   Gold / Yellow & Black Theme
+===================================================== */
 
-/* =========================================================
-   AFRICANNESE GROUP
-   PREMIUM CORPORATE WEBSITE
-   Complete Responsive Stylesheet
-========================================================= */
-
-
-/* =========================================================
-   1. GLOBAL SETTINGS
-========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
-
-:root {
-    --black: #101010;
-    --dark: #171717;
-    --white: #ffffff;
-    --cream: #f3f2ee;
-    --grey: #929292;
-    --light-grey: #d8d8d4;
-    --yellow: #ffcc00;
-    --turquoise: #20bdb9;
-    --pink: #d9a1b5;
-    --green: #19c66b;
-    --container: 1380px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    scroll-behavior:smooth;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#000000;
+    color:#ffffff;
+    line-height:1.7;
 }
 
-body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--black);
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+/* HERO */
+header{
+    background:linear-gradient(135deg,#FFD700,#FFC107);
+    color:#000;
+    text-align:center;
+    padding:90px 20px;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+header img{
+    width:180px;
+    max-width:90%;
+    margin-bottom:20px;
 }
 
-button {
-    font: inherit;
+header h1{
+    font-size:3.5rem;
+    font-weight:700;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+header p{
+    font-size:1.3rem;
+    margin-top:15px;
 }
 
-.container {
-    width: min(90%, var(--container));
-    margin: 0 auto;
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    background:#000;
+    padding:16px;
+    border-bottom:3px solid #FFD700;
 }
 
-.section {
-    padding: 125px 0;
+nav a{
+    color:#FFD700;
+    text-decoration:none;
+    background:#111;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-
-/* =========================================================
-   2. HEADER AND NAVIGATION
-========================================================= */
-
-.site-header {
-    position: relative;
-    z-index: 1000;
-    width: 100%;
-    background: var(--black);
-    border-bottom: 1px solid rgba(255,255,255,0.13);
+nav a:hover,
+nav a.active{
+    background:#FFD700;
+    color:#000;
 }
 
-.header-inner {
-    width: min(92%, 1500px);
-    min-height: 105px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
+/* LAYOUT */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
-.brand {
-    display: inline-flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    line-height: 1;
+.section-title{
+    color:#FFD700;
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:40px;
 }
 
-.brand-main {
-    color: var(--white);
-    font-family: 'Manrope', sans-serif;
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: 3px;
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.brand-sub {
-    color: var(--yellow);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 8px;
-    margin-top: 10px;
+.card{
+    background:#111;
+    border:2px solid #FFD700;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
 }
 
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(255,215,0,.25);
 }
 
-.desktop-nav a {
-    color: #d0d0d0;
-    font-size: 13px;
-    font-weight: 700;
-    transition: color 0.3s ease;
+.card h3{
+    color:#FFD700;
+    margin-bottom:15px;
 }
 
-.desktop-nav a:hover,
-.desktop-nav a.active {
-    color: var(--yellow);
-}
+/* =====================================================
+   STEELWORKS CARD - WELDING PHOTOGRAPH BACKGROUND
+   AFFECTS ONLY THE FIRST DIVISION CARD
+===================================================== */
 
-.header-quote {
-    background: var(--yellow);
-    color: var(--black);
-    padding: 17px 23px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    white-space: nowrap;
-    transition: 0.3s ease;
-}
-
-.header-quote span {
-    margin-left: 12px;
-    font-size: 17px;
-}
-
-.header-quote:hover {
-    background: var(--white);
-    transform: translateY(-2px);
-}
-
-.menu-toggle {
-    display: none;
-    width: 55px;
-    height: 55px;
-    border: 1px solid rgba(255,255,255,0.35);
-    background: transparent;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background: var(--white);
-    transition: 0.3s ease;
-}
-
-.menu-toggle.menu-active span:first-child {
-    transform: translateY(5px) rotate(45deg);
-}
-
-.menu-toggle.menu-active span:last-child {
-    transform: translateY(-5px) rotate(-45deg);
-}
-
-
-/* =========================================================
-   3. HERO SECTION
-========================================================= */
-
-.hero {
-    position: relative;
-    min-height: 780px;
-    background: var(--black);
-    color: var(--white);
-    isolation: isolate;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-image,
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-.hero-image {
-    z-index: -2;
-    background-image: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=90");
-    background-size: cover;
-    background-position: center 48%;
-    filter: brightness(0.9) saturate(1.2);
-    transform: scale(1.02);
-}
-
-.hero-overlay {
-    z-index: -1;
+.grid > .card:first-child{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    min-height:520px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:35px;
+    border:0;
+    border-radius:0;
     background:
-        radial-gradient(
-            circle at 78% 70%,
-            rgba(255, 177, 38, 0.22),
-            transparent 34%
-        ),
-        linear-gradient(
-            90deg,
-            rgba(8,8,8,0.97) 0%,
-            rgba(8,8,8,0.90) 43%,
-            rgba(8,8,8,0.53) 76%,
-            rgba(8,8,8,0.35) 100%
-        );
-}
-
-.hero-container {
-    position: relative;
-    z-index: 2;
-    padding-top: 95px;
-    padding-bottom: 95px;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    align-items: center;
-    gap: 75px;
-}
-
-.hero-content {
-    max-width: 760px;
-}
-
-.eyebrow {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    color: #e8e8e8;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    line-height: 1.8;
-    margin-bottom: 42px;
-}
-
-.eyebrow-line {
-    display: inline-block;
-    width: 55px;
-    height: 5px;
-    background: var(--yellow);
-    margin-right: 12px;
-}
-
-.hero h1 {
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(58px, 7.2vw, 105px);
-    line-height: 0.98;
-    letter-spacing: -5px;
-    font-weight: 800;
-    color: var(--white);
-}
-
-.hero h1 span {
-    color: var(--yellow);
-}
-
-.hero-text {
-    max-width: 660px;
-    margin-top: 42px;
-    color: #c4c4c4;
-    font-size: 20px;
-    line-height: 1.9;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 48px;
-}
-
-.btn {
-    min-height: 68px;
-    padding: 0 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    transition: 0.3s ease;
-}
-
-.btn span {
-    font-size: 21px;
-}
-
-.btn-primary {
-    background: var(--yellow);
-    color: var(--black);
-    border: 1px solid var(--yellow);
-}
-
-.btn-primary:hover {
-    background: var(--white);
-    border-color: var(--white);
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    color: var(--white);
-    border: 1px solid rgba(255,255,255,0.55);
-    background: rgba(0,0,0,0.15);
-}
-
-.btn-outline:hover {
-    color: var(--black);
-    background: var(--white);
-    border-color: var(--white);
-}
-
-.hero-trust {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 55px;
-}
-
-.trust-line {
-    width: 45px;
-    height: 2px;
-    background: var(--yellow);
-}
-
-.hero-trust p {
-    color: #c9c9c9;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 1.8;
-}
-
-.hero-side {
-    align-self: stretch;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hero-side-top,
-.hero-side-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    color: #d0d0d0;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.hero-side-graphic {
-    position: relative;
-    min-height: 370px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.graphic-outline {
-    position: absolute;
-    width: 300px;
-    height: 350px;
-    border: 1px solid rgba(255,204,0,0.55);
-    transform: rotate(7deg);
-}
-
-.graphic-content {
-    position: relative;
-    width: 290px;
-    padding: 40px 32px;
-    background: rgba(12,12,12,0.78);
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-}
-
-.graphic-small {
-    display: block;
-    margin-bottom: 25px;
-    color: var(--yellow);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.graphic-content strong {
-    display: block;
-    color: var(--white);
-    font-family: 'Manrope', sans-serif;
-    font-size: 35px;
-    line-height: 1.1;
-    font-weight: 800;
-}
-
-.graphic-accent {
-    width: 60px;
-    height: 5px;
-    background: var(--yellow);
-    margin: 25px 0;
-}
-
-.graphic-content p {
-    color: #bdbdbd;
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-.graphic-index {
-    position: absolute;
-    right: -5px;
-    bottom: 0;
-    color: rgba(255,255,255,0.12);
-    font-family: 'Manrope', sans-serif;
-    font-size: 65px;
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   4. SECTION LABELS
-========================================================= */
-
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    color: var(--black);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 40px;
-}
-
-.section-label > span {
-    width: 55px;
-    height: 4px;
-    background: var(--yellow);
-    flex-shrink: 0;
-}
-
-.light-label {
-    color: var(--white);
-}
-
-
-/* =========================================================
-   5. INTRODUCTION
-========================================================= */
-
-.intro {
-    background: var(--cream);
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: start;
-}
-
-.intro h2,
-.section-heading h2,
-.approach h2,
-.project-banner h2,
-.final-cta h2 {
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(42px, 5.2vw, 72px);
-    line-height: 1.08;
-    letter-spacing: -3px;
-    font-weight: 800;
-}
-
-.intro h2 span,
-.section-heading h2 span,
-.approach h2 span,
-.final-cta h2 span {
-    color: #999999;
-}
-
-.intro-copy {
-    max-width: 620px;
-}
-
-.intro-copy p {
-    color: #777777;
-    font-size: 17px;
-    line-height: 1.95;
-    margin-bottom: 28px;
-}
-
-.intro-copy .large-copy {
-    color: var(--black);
-    font-size: 23px;
-    line-height: 1.7;
-    font-weight: 600;
-}
-
-.intro-copy strong {
-    color: var(--black);
-}
-
-.text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 25px;
-    margin-top: 18px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid var(--black);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    transition: 0.3s ease;
-}
-
-.text-link span {
-    font-size: 20px;
-}
-
-.text-link:hover {
-    color: #a37f00;
-    border-color: var(--yellow);
-}
-
-
-/* =========================================================
-   6. DIVISIONS SECTION
-========================================================= */
-
-.divisions {
-    background: #e9e8e3;
-}
-
-.section-heading {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 50px;
-    margin-bottom: 65px;
-}
-
-.section-heading > p {
-    max-width: 390px;
-    color: #777777;
-    font-size: 17px;
-    line-height: 1.9;
-    padding-bottom: 8px;
-}
-
-.division-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-}
-
-.division-card {
-    position: relative;
-    min-height: 610px;
-    padding: 55px 55px 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    isolation: isolate;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 0.4s ease;
-}
-
-.division-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-top {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.card-number {
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.card-arrow {
-    font-size: 28px;
-}
-
-.card-content {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-    margin-top: 65px;
-}
-
-.division-subtitle {
-    display: block;
-    margin-bottom: 30px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.card-content h3 {
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(39px, 5vw, 65px);
-    line-height: 1.08;
-    letter-spacing: -2px;
-    font-weight: 800;
-}
-
-.card-accent {
-    width: 105px;
-    height: 8px;
-    margin: 38px 0;
-}
-
-.card-content p {
-    max-width: 650px;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.card-footer {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 30px;
-    border-top: 1px solid currentColor;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.card-footer span {
-    font-size: 25px;
-    transition: transform 0.3s ease;
-}
-
-.division-card:hover .card-footer span {
-    transform: translateX(8px);
-}
-
-
-/* =========================================================
-   7. STEELWORKS CARD
-   BLACK + GOLDEN WELDING SPARKS
-========================================================= */
-
-.steel-card {
-    background-color: #101010;
-    background-image:
         linear-gradient(
             180deg,
-            rgba(8,8,8,0.48) 0%,
-            rgba(8,8,8,0.64) 48%,
-            rgba(8,8,8,0.92) 100%
+            rgba(0,0,0,.30) 0%,
+            rgba(0,0,0,.42) 35%,
+            rgba(0,0,0,.82) 100%
         ),
-        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=90");
-    background-position: center;
-    color: var(--white);
+        url("steelworks-welding.jpg") center center / cover no-repeat;
+    color:#fff;
+    box-shadow:none;
 }
 
-.steel-card .card-accent {
-    background: var(--yellow);
+.grid > .card:first-child:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
-.steel-card .card-content p {
-    color: #d0d0d0;
+.grid > .card:first-child h3{
+    position:relative;
+    color:#fff;
+    font-size:2.5rem;
+    line-height:1.15;
+    font-weight:800;
+    margin-bottom:20px;
+    max-width:450px;
 }
 
-.steel-card .division-subtitle {
-    color: #bdbdbd;
+.grid > .card:first-child p{
+    position:relative;
+    color:#fff;
+    font-size:1.1rem;
+    line-height:1.8;
+    max-width:600px;
+    border-bottom:2px solid rgba(255,255,255,.85);
+    padding-bottom:20px;
+    margin-bottom:25px;
 }
 
-.steel-card .card-footer {
-    border-color: rgba(255,255,255,0.45);
+.grid > .card:first-child .btn{
+    position:relative;
+    align-self:flex-start;
+    display:inline-block;
+    background:transparent;
+    color:#fff;
+    border:0;
+    border-radius:0;
+    padding:12px 0;
+    font-size:1rem;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
-
-/* =========================================================
-   8. CORPORATE WEAR CARD
-   TURQUOISE + WORKWEAR PHOTOGRAPHY
-========================================================= */
-
-.wear-card {
-    background-color: var(--turquoise);
-    background-image:
-        linear-gradient(
-            180deg,
-            rgba(32,189,185,0.73) 0%,
-            rgba(32,189,185,0.82) 50%,
-            rgba(32,189,185,0.92) 100%
-        ),
-        url("https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=1800&q=85");
-    background-position: center;
-    color: var(--black);
+.grid > .card:first-child .btn:hover{
+    background:transparent;
+    color:#FFD700;
+    transform:translateX(5px);
 }
 
-.wear-card .card-accent {
-    background: var(--black);
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    background:#FFD700;
+    color:#000;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:35px;
+    font-weight:bold;
+    border:2px solid #FFD700;
+    transition:.3s;
 }
 
-.wear-card .card-content p {
-    color: #173b3a;
+.btn:hover{
+    background:#FFC107;
 }
 
-.wear-card .division-subtitle {
-    color: #175d5a;
+.btn-outline{
+    display:inline-block;
+    background:transparent;
+    color:#FFD700;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:35px;
+    font-weight:bold;
+    border:2px solid #FFD700;
+    transition:.3s;
 }
 
-.wear-card .card-footer {
-    border-color: rgba(0,0,0,0.45);
+.btn-outline:hover{
+    background:#FFD700;
+    color:#000;
 }
 
-
-/* =========================================================
-   9. DIGITAL BRANDING CARD
-   DUSTY PINK + BRANDING PHOTOGRAPHY
-========================================================= */
-
-.digital-card {
-    background-color: var(--pink);
-    background-image:
-        linear-gradient(
-            180deg,
-            rgba(217,161,181,0.70) 0%,
-            rgba(217,161,181,0.82) 50%,
-            rgba(217,161,181,0.93) 100%
-        ),
-        url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1800&q=85");
-    background-position: center;
-    color: var(--black);
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
 }
 
-.digital-card .card-accent {
-    background: var(--black);
+.stat{
+    background:#111;
+    border:2px solid #FFD700;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
 }
 
-.digital-card .card-content p {
-    color: #49343c;
+.stat h3{
+    color:#FFD700;
+    font-size:2.5rem;
 }
 
-.digital-card .division-subtitle {
-    color: #684553;
+/* FORMS */
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #FFD700;
+    border-radius:10px;
+    background:#111;
+    color:#fff;
 }
 
-.digital-card .card-footer {
-    border-color: rgba(0,0,0,0.45);
+button{
+    background:#FFD700;
+    color:#000;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-
-/* =========================================================
-   10. CORPORATE APPROACH
-========================================================= */
-
-.approach {
-    background: var(--black);
-    color: var(--white);
+/* FOOTER */
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    border-top:3px solid #FFD700;
 }
 
-.approach .section-label {
-    color: var(--white);
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:34px;
+    z-index:1000;
 }
 
-.approach-grid {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 100px;
-}
+/* MOBILE */
+@media(max-width:768px){
 
-.approach h2 span {
-    color: #777777;
-}
-
-.approach-lead {
-    max-width: 440px;
-    margin-top: 60px;
-    color: var(--white);
-    font-size: 25px;
-    line-height: 1.6;
-}
-
-.principles {
-    border-top: 1px solid rgba(255,255,255,0.18);
-}
-
-.principle {
-    display: grid;
-    grid-template-columns: 75px 1fr;
-    gap: 25px;
-    padding: 38px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.18);
-}
-
-.principle-icon {
-    color: var(--yellow);
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.principle h3 {
-    margin-bottom: 17px;
-    color: var(--white);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.principle p {
-    max-width: 500px;
-    color: #929292;
-    font-size: 16px;
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   11. PROJECT BANNER
-========================================================= */
-
-.project-banner {
-    padding: 110px 0;
-    background: var(--yellow);
-    color: var(--black);
-}
-
-.project-banner-inner {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.project-banner .section-label {
-    color: var(--black);
-}
-
-.project-banner .section-label > span {
-    background: var(--black);
-}
-
-.project-banner h2 {
-    font-size: clamp(45px, 5.5vw, 75px);
-}
-
-.project-banner h2 span {
-    color: rgba(0,0,0,0.48);
-}
-
-.project-banner p {
-    max-width: 580px;
-    margin-top: 28px;
-    color: #514300;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.btn-light {
-    flex-shrink: 0;
-    min-width: 270px;
-    background: var(--black);
-    color: var(--white);
-    border: 1px solid var(--black);
-}
-
-.btn-light:hover {
-    background: var(--white);
-    color: var(--black);
-}
-
-
-/* =========================================================
-   12. FINAL CALL TO ACTION
-========================================================= */
-
-.final-cta {
-    background: var(--cream);
-}
-
-.final-cta-inner {
-    max-width: 900px;
-}
-
-.final-cta h2 {
-    font-size: clamp(48px, 6vw, 82px);
-}
-
-.final-cta h2 span {
-    color: #999999;
-}
-
-.final-cta p {
-    max-width: 620px;
-    margin: 35px 0;
-    color: #777777;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   13. FOOTER
-========================================================= */
-
-.site-footer {
-    padding: 85px 0 30px;
-    background: var(--black);
-    color: var(--white);
-}
-
-.footer-top {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr 1fr 1.1fr;
-    gap: 55px;
-    padding-bottom: 75px;
-}
-
-.footer-logo .brand-main {
-    font-size: 25px;
-}
-
-.footer-brand > p {
-    margin-top: 28px;
-    color: #c0c0c0;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.footer-brand .footer-description {
-    max-width: 280px;
-    color: #777777;
-    font-size: 13px;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 17px;
-}
-
-.footer-column h4 {
-    margin-bottom: 12px;
-    color: var(--yellow);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.footer-column a,
-.footer-column p {
-    color: #a7a7a7;
-    font-size: 13px;
-    line-height: 1.8;
-    transition: color 0.3s ease;
-}
-
-.footer-column a:hover {
-    color: var(--yellow);
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255,255,255,0.16);
-}
-
-.footer-bottom p {
-    color: #777777;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   14. WHATSAPP BUTTON
-========================================================= */
-
-.whatsapp {
-    position: fixed;
-    z-index: 999;
-    right: 30px;
-    bottom: 30px;
-    min-height: 70px;
-    padding: 0 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    border-radius: 50px;
-    border: 2px solid rgba(255,255,255,0.2);
-    background: var(--green);
-    color: #073b25;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    transition: 0.3s ease;
-}
-
-.whatsapp:hover {
-    transform: translateY(-5px);
-    background: #13db74;
-}
-
-.whatsapp-icon {
-    font-size: 24px;
-    font-weight: 800;
-}
-
-.whatsapp-text {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-
-/* =========================================================
-   15. TABLETS
-========================================================= */
-
-@media (max-width: 1050px) {
-
-    .header-inner {
-        gap: 20px;
-    }
-
-    .desktop-nav {
-        gap: 18px;
-    }
-
-    .desktop-nav a {
-        font-size: 12px;
-    }
-
-    .hero-grid {
-        gap: 35px;
-    }
-
-    .hero h1 {
-        font-size: clamp(58px, 7vw, 78px);
-    }
-
-    .intro-grid,
-    .approach-grid {
-        gap: 55px;
-    }
-
-    .footer-top {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-    }
-}
-
-
-/* =========================================================
-   16. MOBILE NAVIGATION
-========================================================= */
-
-@media (max-width: 760px) {
-
-    .header-inner {
-        position: relative;
-        min-height: 100px;
-        width: 90%;
-        gap: 15px;
-    }
-
-    .brand-main {
-        font-size: 23px;
-        letter-spacing: 2px;
-    }
-
-    .brand-sub {
-        font-size: 10px;
-        letter-spacing: 7px;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex-shrink: 0;
-    }
-
-    .header-quote {
-        display: none;
-    }
-
-    .desktop-nav {
-        position: absolute;
-        top: 100%;
-        left: -5.56%;
-        right: -5.56%;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px 5%;
-        background: #151515;
-        border-top: 1px solid rgba(255,255,255,0.12);
-        box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-    }
-
-    .desktop-nav.nav-open {
-        display: flex;
-    }
-
-    .desktop-nav a {
-        padding: 17px 0;
-        font-size: 14px;
-        border-bottom: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .desktop-nav a:last-child {
-        border-bottom: none;
-    }
-
-    .hero {
-        min-height: auto;
-    }
-
-    .hero-image {
-        background-position: 63% center;
-        filter: brightness(0.95) saturate(1.25);
-    }
-
-    .hero-overlay {
-        background:
-            radial-gradient(
-                circle at 78% 75%,
-                rgba(255,174,35,0.20),
-                transparent 40%
-            ),
-            linear-gradient(
-                90deg,
-                rgba(8,8,8,0.93),
-                rgba(8,8,8,0.70)
-            );
-    }
-
-    .hero-container {
-        width: 90%;
-        padding-top: 100px;
-        padding-bottom: 80px;
-    }
-
-    .hero-grid {
-        display: block;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .eyebrow {
-        gap: 7px;
-        margin-bottom: 40px;
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-    .eyebrow-line {
-        width: 45px;
-        height: 5px;
-        margin-right: 5px;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 12vw, 72px);
-        line-height: 1.02;
-        letter-spacing: -2.5px;
-    }
-
-    .hero-text {
-        margin-top: 35px;
-        font-size: 17px;
-        line-height: 1.9;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 40px;
-    }
-
-    .btn {
-        width: 100%;
-        min-height: 68px;
-        padding: 0 24px;
-    }
-
-    .hero-trust {
-        margin-top: 38px;
-        align-items: flex-start;
-    }
-
-    .hero-trust p {
-        font-size: 10px;
-    }
-
-    .hero-side {
-        display: none;
-    }
-
-    .section {
-        padding: 85px 0;
-    }
-
-    .section-label {
-        gap: 13px;
-        margin-bottom: 30px;
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-
-    .section-label > span {
-        width: 42px;
-    }
-
-    .intro-grid,
-    .approach-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .intro h2,
-    .section-heading h2,
-    .approach h2 {
-        font-size: clamp(40px, 10vw, 56px);
-        letter-spacing: -2px;
-    }
-
-    .intro-copy .large-copy {
-        font-size: 19px;
-    }
-
-    .intro-copy p {
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-    .text-link {
-        font-size: 10px;
-    }
-
-    .section-heading {
-        display: block;
-        margin-bottom: 45px;
-    }
-
-    .section-heading > p {
-        margin-top: 25px;
-        font-size: 15px;
-    }
-
-    .division-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .division-card {
-        min-height: 570px;
-        padding: 42px 32px 35px;
-    }
-
-    .card-number {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-    .card-arrow {
-        font-size: 24px;
-    }
-
-    .card-content {
-        margin-top: 55px;
-    }
-
-    .division-subtitle {
-        font-size: 10px;
-        letter-spacing: 2.5px;
-        margin-bottom: 25px;
-    }
-
-    .card-content h3 {
-        font-size: clamp(38px, 9vw, 51px);
-        letter-spacing: -1.5px;
-    }
-
-    .card-accent {
-        width: 85px;
-        height: 7px;
-        margin: 30px 0;
-    }
-
-    .card-content p {
-        font-size: 15px;
-        line-height: 1.85;
-    }
-
-    .card-footer {
-        padding-top: 24px;
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-    .card-footer span {
-        font-size: 22px;
-    }
-
-    .steel-card {
-        background-position: 60% center;
-    }
-
-    .wear-card {
-        background-position: center center;
-    }
-
-    .digital-card {
-        background-position: center center;
-    }
-
-    .approach-lead {
-        margin-top: 30px;
-        font-size: 21px;
-    }
-
-    .principle {
-        grid-template-columns: 45px 1fr;
-        gap: 15px;
-        padding: 30px 0;
-    }
-
-    .principle h3 {
-        font-size: 12px;
+    header h1{
+        font-size:2.4rem;
     }
 
-    .principle p {
-        font-size: 14px;
+    header p{
+        font-size:1.05rem;
     }
 
-    .project-banner {
-        padding: 85px 0;
+    .section-title{
+        font-size:2rem;
     }
 
-    .project-banner-inner {
-        display: block;
+    nav a{
+        padding:10px 16px;
+        font-size:.9rem;
     }
 
-    .project-banner h2 {
-        font-size: clamp(43px, 10vw, 58px);
-        letter-spacing: -2px;
+    .grid{
+        grid-template-columns:1fr;
     }
 
-    .project-banner p {
-        font-size: 15px;
-        margin-top: 25px;
+    .grid > .card:first-child{
+        min-height:520px;
+        padding:28px;
     }
 
-    .project-banner .btn {
-        margin-top: 40px;
+    .grid > .card:first-child h3{
+        font-size:2.3rem;
     }
 
-    .final-cta h2 {
-        font-size: clamp(45px, 11vw, 65px);
-        letter-spacing: -2px;
+    .grid > .card:first-child p{
+        font-size:1rem;
     }
-
-    .final-cta p {
-        font-size: 15px;
-    }
-
-    .final-cta .btn {
-        max-width: 100%;
-    }
-
-    .site-footer {
-        padding-top: 70px;
-    }
-
-    .footer-top {
-        grid-template-columns: 1fr 1fr;
-        gap: 45px 25px;
-        padding-bottom: 50px;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
-
-    .footer-column {
-        gap: 13px;
-    }
-
-    .footer-column h4 {
-        font-size: 10px;
-    }
-
-    .footer-column a,
-    .footer-column p {
-        font-size: 12px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 13px;
-        line-height: 1.7;
-    }
-
-    .footer-bottom p {
-        font-size: 9px;
-    }
-
-    .whatsapp {
-        right: 16px;
-        bottom: 18px;
-        min-height: 58px;
-        padding: 0 20px;
-        gap: 10px;
-    }
-
-    .whatsapp-icon {
-        font-size: 20px;
-    }
-
-    .whatsapp-text {
-        font-size: 10px;
-    }
-}
-
-
-/* =========================================================
-   17. SMALL MOBILE SCREENS
-========================================================= */
-
-@media (max-width: 390px) {
-
-    .brand-main {
-        font-size: 20px;
-    }
-
-    .menu-toggle {
-        width: 48px;
-        height: 48px;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .division-card {
-        min-height: 540px;
-        padding: 35px 24px 30px;
-    }
-
-    .card-content h3 {
-        font-size: 36px;
-    }
-
-    .card-content p {
-        font-size: 14px;
-    }
-
-    .footer-top {
-        gap: 40px 18px;
-    }
-
-    .whatsapp {
-        min-height: 54px;
-        padding: 0 15px;
-    }
-
-}
-
-
-/* =========================================================
-   18. ACCESSIBILITY AND MOTION
-========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid var(--yellow);
-    outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-    }
-
 }
