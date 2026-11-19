@@ -1458,3 +1458,73 @@ button:focus-visible {
     }
 
 }
+
+/* =================================================
+   AFRICANNESE - GOLDEN SPARKS HERO BACKGROUND
+   Keep the modern homepage design.
+   Restore the brighter industrial atmosphere.
+================================================= */
+
+.hero {
+    background: #101010;
+    isolation: isolate;
+}
+
+.hero-image {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 10, 0.72) 0%,
+            rgba(5, 8, 10, 0.48) 48%,
+            rgba(5, 8, 10, 0.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.18) saturate(1.18);
+}
+
+.hero-overlay {
+    background:
+        radial-gradient(
+            circle at 78% 75%,
+            rgba(255, 174, 35, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(255, 190, 70, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 10, 0.12),
+            transparent 70%
+        );
+}
+
+/* Keep the text clear on smaller screens */
+
+@media (max-width: 800px) {
+
+    .hero-image {
+        background-position: 62% center;
+        filter: brightness(1.12) saturate(1.2);
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 8, 10, 0.30),
+                rgba(5, 8, 10, 0.08)
+            ),
+            radial-gradient(
+                circle at 75% 75%,
+                rgba(255, 174, 35, 0.18),
+                transparent 45%
+            );
+    }
+
+}
