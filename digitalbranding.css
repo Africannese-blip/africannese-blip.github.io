@@ -1,7 +1,19 @@
 /* =========================================================
    AFRICANNESE DIGITAL BRANDING
-   PREMIUM RESPONSIVE STYLESHEET
+   COMPLETE PREMIUM RESPONSIVE STYLESHEET
 ========================================================= */
+
+:root {
+    --db-black: #120e14;
+    --db-black-2: #18131a;
+    --db-black-3: #211a22;
+    --db-pink: #e394ba;
+    --db-pink-light: #f0b4d0;
+    --db-white: #f7f4f6;
+    --db-muted: #bcb5bc;
+    --db-line: rgba(255,255,255,0.13);
+    --db-container: 1180px;
+}
 
 *,
 *::before,
@@ -12,22 +24,24 @@
 html {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     width: 100%;
+    min-width: 0;
     max-width: 100%;
-    overflow-x: hidden;
-    background: #120e14;
-    color: #f7f4f6;
+    overflow-x: clip;
+    background: var(--db-black);
+    color: var(--db-white);
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -41,48 +55,15 @@ button {
     font: inherit;
 }
 
-section,
-header,
-footer,
-main,
-div,
-nav {
-    max-width: 100%;
+h1, h2, h3, h4, p {
+    overflow-wrap: break-word;
 }
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-:root {
-    --black: #120e14;
-    --black-2: #18131a;
-    --black-3: #211a22;
-
-    --pink: #e394ba;
-    --pink-light: #f0b4d0;
-
-    --white: #f7f4f6;
-    --muted: #bcb5bc;
-
-    --line: rgba(255,255,255,0.12);
-
-    --container: 1180px;
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
 
 .db-container {
-    width: calc(100% - 48px);
-    max-width: var(--container);
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100% - 64px);
+    max-width: var(--db-container);
+    margin: 0 auto;
 }
-
 
 /* =========================================================
    HEADER
@@ -93,19 +74,19 @@ nav {
     z-index: 1000;
     width: 100%;
     background: rgba(18,14,20,0.97);
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--db-line);
 }
 
 .db-header-inner {
-    min-height: 96px;
+    width: calc(100% - 64px);
+    max-width: var(--db-container);
+    min-height: 94px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
 }
-
-
-/* LOGO */
 
 .db-logo {
     display: flex;
@@ -114,62 +95,55 @@ nav {
 }
 
 .db-logo-main {
+    color: var(--db-white);
     font-size: 25px;
     font-weight: 800;
     letter-spacing: 5px;
     line-height: 1;
-    color: var(--white);
 }
 
 .db-logo-sub {
     margin-top: 9px;
-    color: var(--pink);
+    color: var(--db-pink);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 4px;
 }
 
-
-/* NAVIGATION */
-
 .db-nav {
     display: flex;
     align-items: center;
-    gap: 34px;
-    white-space: nowrap;
+    gap: 30px;
 }
 
 .db-nav a {
-    font-size: 15px;
-    font-weight: 600;
     color: #d9d4d8;
-    transition: 0.25s ease;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .25s ease;
 }
 
 .db-nav a:hover {
-    color: var(--pink);
+    color: var(--db-pink);
 }
 
 .db-nav-cta {
-    padding: 13px 20px;
-    border: 1px solid var(--pink);
-    color: var(--pink) !important;
+    padding: 13px 19px;
+    border: 1px solid var(--db-pink);
+    color: var(--db-pink) !important;
 }
 
 .db-nav-cta:hover {
-    background: var(--pink);
-    color: var(--black) !important;
+    background: var(--db-pink);
+    color: var(--db-black) !important;
 }
-
-
-/* MOBILE MENU BUTTON */
 
 .db-menu-toggle {
     display: none;
     width: 46px;
     height: 42px;
     padding: 9px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--db-line);
     background: transparent;
     cursor: pointer;
 }
@@ -179,9 +153,8 @@ nav {
     width: 100%;
     height: 2px;
     margin: 5px 0;
-    background: var(--white);
+    background: var(--db-white);
 }
-
 
 /* =========================================================
    HERO
@@ -189,259 +162,219 @@ nav {
 
 .db-hero {
     position: relative;
-    padding: 110px 0 120px;
-
+    padding: 105px 0 115px;
+    overflow: hidden;
     background:
         radial-gradient(
-            circle at 80% 50%,
-            rgba(227,148,186,0.15),
+            circle at 80% 40%,
+            rgba(227,148,186,.16),
             transparent 35%
         ),
-        var(--black);
-
-    border-bottom: 1px solid var(--line);
+        var(--db-black);
+    border-bottom: 1px solid var(--db-line);
 }
 
 .db-hero-grid {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(280px, 0.65fr);
-
+    grid-template-columns: minmax(0,1.05fr) minmax(0,.75fr);
     align-items: center;
-
-    gap: 80px;
+    gap: 70px;
 }
 
-.db-hero-content {
+.db-hero-content,
+.db-hero-visual {
     min-width: 0;
+    width: 100%;
 }
 
 .db-eyebrow {
-    margin-bottom: 36px;
-    color: var(--pink);
-    font-size: 15px;
+    margin: 0 0 34px;
+    color: var(--db-pink);
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 4px;
-    line-height: 1.6;
+    letter-spacing: 3px;
+    line-height: 1.7;
 }
 
 .db-hero h1 {
-    margin: 0;
     max-width: 760px;
-
-    font-size: clamp(60px, 7vw, 105px);
-
+    margin: 0;
+    font-size: clamp(54px,7vw,100px);
     font-weight: 800;
-
     letter-spacing: -5px;
-
-    line-height: 0.91;
+    line-height: .94;
 }
 
 .db-hero h1 span {
     display: block;
-    color: var(--pink);
+    color: var(--db-pink);
 }
 
 .db-hero-text {
-    max-width: 650px;
-    margin: 45px 0 0;
-
+    max-width: 620px;
+    margin: 35px 0 0;
     color: #d9d4d8;
-
     font-size: 19px;
     line-height: 1.75;
 }
 
 .db-hero-text-small {
-    margin-top: 20px;
-    color: #a9a2aa;
-    font-size: 16px;
+    margin-top: 18px;
+    color: var(--db-muted);
+    font-size: 15px;
+    line-height: 1.7;
 }
-
-
-/* HERO BUTTONS */
 
 .db-hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 .db-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    min-height: 52px;
-
+    min-height: 54px;
     padding: 0 25px;
-
     border: 1px solid transparent;
-
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    transition: 0.25s ease;
+    letter-spacing: .8px;
+    transition: .25s ease;
 }
 
 .db-btn-pink {
-    background: var(--pink);
-    color: var(--black);
+    background: var(--db-pink);
+    color: var(--db-black);
 }
 
 .db-btn-pink:hover {
-    background: var(--pink-light);
-    transform: translateY(-2px);
+    background: var(--db-pink-light);
+    transform: translateY(-3px);
 }
 
 .db-btn-outline {
-    border-color: rgba(255,255,255,0.25);
-    color: var(--white);
+    border-color: rgba(255,255,255,.3);
+    color: var(--db-white);
 }
 
 .db-btn-outline:hover {
-    border-color: var(--pink);
-    color: var(--pink);
+    border-color: var(--db-pink);
+    color: var(--db-pink);
 }
 
-
-/* HERO VISUAL */
+/* =========================================================
+   HERO BRANDING GRAPHIC
+========================================================= */
 
 .db-hero-visual {
-    min-width: 0;
-
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .db-visual-card {
     position: relative;
-
-    width: min(100%, 420px);
-
-    aspect-ratio: 0.82;
-
-    padding: 30px;
-
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 0.86;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    overflow: hidden;
     background:
-        linear-gradient(
-            145deg,
-            #252027,
-            #171218
-        );
-
-    border: 1px solid rgba(227,148,186,0.35);
-
-    box-shadow:
-        30px 30px 0 rgba(227,148,186,0.08);
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(227,148,186,.16),
+            transparent 35%
+        ),
+        linear-gradient(145deg,#28202a,#171218);
+    border: 1px solid rgba(227,148,186,.4);
+    box-shadow: 24px 24px 0 rgba(227,148,186,.08);
 }
 
-.db-visual-card::after {
+.db-visual-card::before {
     content: "";
-
     position: absolute;
-
-    inset: 18px;
-
-    border: 1px solid rgba(255,255,255,0.09);
-
+    inset: 17px;
+    border: 1px solid rgba(255,255,255,.1);
     pointer-events: none;
 }
 
-.db-visual-top {
+.db-visual-card::after {
+    content: "✳";
+    position: absolute;
+    right: 25px;
+    bottom: 35px;
+    color: rgba(227,148,186,.12);
+    font-size: 100px;
+}
+
+.db-visual-top,
+.db-visual-title,
+.db-visual-bottom {
     position: relative;
     z-index: 2;
+}
 
-    color: var(--pink);
-
+.db-visual-top {
+    color: var(--db-pink);
     font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 4px;
 }
 
 .db-visual-title {
-    position: relative;
-    z-index: 2;
-
-    font-size: clamp(50px, 6vw, 78px);
-
+    font-size: clamp(48px,6vw,78px);
     font-weight: 800;
-
     letter-spacing: -4px;
-
-    line-height: 0.88;
+    line-height: .9;
 }
 
 .db-visual-title span {
-    color: var(--pink);
+    color: var(--db-pink);
 }
 
 .db-visual-bottom {
-    position: relative;
-    z-index: 2;
-
+    color: #aaa1aa;
     font-size: 10px;
-
     letter-spacing: 3px;
-
-    color: #a9a2aa;
 }
-
 
 /* =========================================================
    INTRODUCTION
 ========================================================= */
 
 .db-intro {
-    padding: 130px 0;
-    background: var(--black-2);
+    padding: 115px 0;
+    background: var(--db-black-2);
 }
 
 .db-intro-grid {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 100px;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 85px;
+    align-items: start;
 }
 
 .db-section-number {
     display: block;
-
-    margin-bottom: 25px;
-
-    color: var(--pink);
-
+    margin-bottom: 24px;
+    color: var(--db-pink);
     font-size: 11px;
-
     font-weight: 700;
-
     letter-spacing: 3px;
 }
 
 .db-intro h2 {
-    margin: 0;
-
     max-width: 550px;
-
-    font-size: clamp(45px, 5vw, 72px);
-
+    margin: 0;
+    font-size: clamp(44px,5vw,70px);
     letter-spacing: -3px;
-
-    line-height: 0.98;
+    line-height: 1;
 }
 
 .db-intro h2 span,
@@ -450,230 +383,171 @@ nav {
 .db-process-heading h2 span,
 .db-why h2 span,
 .db-final-cta h2 span {
-    color: var(--pink);
+    color: var(--db-pink);
 }
 
 .db-intro-copy {
-    padding-top: 45px;
+    min-width: 0;
+    padding-top: 35px;
 }
 
 .db-intro-copy p {
-    margin: 0 0 25px;
-
+    margin: 0 0 23px;
     color: #c4bdc4;
-
-    font-size: 18px;
-
-    line-height: 1.8;
+    font-size: 17px;
+    line-height: 1.85;
 }
-
 
 /* =========================================================
    SERVICES
 ========================================================= */
 
 .db-services {
-    padding: 130px 0;
-    background: var(--black);
+    padding: 115px 0;
+    background: var(--db-black);
 }
 
 .db-section-heading {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(250px, 0.6fr);
-
-    gap: 70px;
-
+    grid-template-columns: minmax(0,1fr) minmax(0,.65fr);
     align-items: end;
-
-    margin-bottom: 70px;
+    gap: 60px;
+    margin-bottom: 60px;
 }
 
 .db-section-heading h2 {
-    margin: 0;
-
     max-width: 700px;
-
-    font-size: clamp(45px, 5vw, 70px);
-
+    margin: 0;
+    font-size: clamp(44px,5vw,68px);
     letter-spacing: -3px;
-
-    line-height: 0.98;
+    line-height: 1;
 }
 
 .db-section-heading > p {
     margin: 0;
-
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.7;
+    color: var(--db-muted);
+    font-size: 16px;
+    line-height: 1.8;
 }
-
-
-/* SERVICE GRID */
 
 .db-service-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
+    grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 1px;
-
-    background: var(--line);
-
-    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--db-line);
+    border: 1px solid var(--db-line);
 }
 
 .db-service-card {
     min-width: 0;
-
-    padding: 38px 34px 45px;
-
-    background: var(--black-2);
-
-    transition: 0.3s ease;
+    padding: 35px 30px 40px;
+    background: var(--db-black-2);
+    transition: background .3s ease;
 }
 
 .db-service-card:hover {
-    background: #211a22;
+    background: #261d27;
 }
 
 .db-service-number {
-    color: #777077;
-
-    font-size: 13px;
-
+    color: #8c828c;
+    font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 2px;
 }
 
 .db-service-icon {
-    margin: 38px 0 25px;
-
-    color: var(--pink);
-
-    font-size: 25px;
+    margin: 35px 0 22px;
+    color: var(--db-pink);
+    font-size: 26px;
 }
 
 .db-service-card h3 {
-    margin: 0 0 16px;
-
-    font-size: 27px;
-
+    margin: 0 0 14px;
+    font-size: 24px;
     letter-spacing: -1px;
 }
 
 .db-service-card p {
-    min-height: 105px;
-
-    margin: 0 0 24px;
-
+    margin: 0 0 22px;
     color: #aaa4ab;
-
-    font-size: 15px;
-
-    line-height: 1.75;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .db-service-card ul {
     padding: 0;
     margin: 0;
-
     list-style: none;
 }
 
 .db-service-card li {
     padding: 10px 0;
-
-    border-top: 1px solid var(--line);
-
+    border-top: 1px solid var(--db-line);
     color: #d5cfd4;
-
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.5;
 }
-
 
 /* =========================================================
    BRAND STATEMENT
 ========================================================= */
 
 .db-statement {
-    padding: 140px 0;
-
+    padding: 120px 0;
     background:
-        linear-gradient(
-            135deg,
-            #171218,
-            #241b23
-        );
-
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(227,148,186,.13),
+            transparent 38%
+        ),
+        linear-gradient(135deg,#171218,#241b23);
+    border-top: 1px solid var(--db-line);
+    border-bottom: 1px solid var(--db-line);
 }
 
 .db-statement h2 {
     max-width: 950px;
-
     margin: 0;
-
-    font-size: clamp(48px, 7vw, 100px);
-
+    font-size: clamp(48px,7vw,94px);
     letter-spacing: -5px;
-
-    line-height: 0.92;
+    line-height: .96;
 }
 
 .db-statement h2 span {
     display: block;
-    color: var(--pink);
+    color: var(--db-pink);
 }
 
 .db-statement p {
     max-width: 650px;
-
-    margin: 45px 0 0;
-
+    margin: 35px 0 0;
     color: #bbb4bb;
-
-    font-size: 18px;
-
+    font-size: 17px;
     line-height: 1.8;
 }
-
 
 /* =========================================================
    CAPABILITIES
 ========================================================= */
 
 .db-capabilities {
-    padding: 130px 0;
-    background: var(--black-2);
+    padding: 115px 0;
+    background: var(--db-black-2);
 }
 
 .db-cap-grid {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.8fr)
-        minmax(0, 1.2fr);
-
-    gap: 100px;
+    grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
+    gap: 80px;
 }
 
 .db-cap-title h2 {
     margin: 0;
-
-    font-size: clamp(45px, 5vw, 70px);
-
+    font-size: clamp(44px,5vw,68px);
     letter-spacing: -3px;
-
-    line-height: 0.98;
+    line-height: 1;
 }
 
 .db-cap-title h2 span {
@@ -681,101 +555,765 @@ nav {
 }
 
 .db-cap-list {
-    border-top: 1px solid var(--line);
+    min-width: 0;
+    border-top: 1px solid var(--db-line);
 }
 
 .db-cap-item {
     display: grid;
-
-    grid-template-columns: 60px 1fr;
-
+    grid-template-columns: 45px minmax(0,1fr);
     gap: 20px;
-
-    padding: 28px 0;
-
-    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+    border-bottom: 1px solid var(--db-line);
 }
 
 .db-cap-item > span {
-    color: var(--pink);
-
+    color: var(--db-pink);
     font-size: 12px;
-
     font-weight: 700;
 }
 
 .db-cap-item h3 {
     margin: 0 0 8px;
-
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .db-cap-item p {
     margin: 0;
-
-    color: var(--muted);
-
-    font-size: 15px;
-
-    line-height: 1.6;
+    color: var(--db-muted);
+    font-size: 14px;
+    line-height: 1.75;
 }
-
 
 /* =========================================================
    PROCESS
 ========================================================= */
 
 .db-process {
-    padding: 130px 0;
-    background: var(--black);
+    padding: 115px 0;
+    background: var(--db-black);
 }
 
 .db-process-heading {
     max-width: 750px;
-
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .db-process-heading h2 {
     margin: 0;
-
-    font-size: clamp(45px, 5vw, 70px);
-
+    font-size: clamp(44px,5vw,68px);
     letter-spacing: -3px;
-
-    line-height: 0.98;
+    line-height: 1;
 }
 
 .db-process-heading p {
     max-width: 580px;
-
-    margin: 30px 0 0;
-
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.7;
+    margin: 25px 0 0;
+    color: var(--db-muted);
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .db-process-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-    border-top: 1px solid var(--line);
-
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    border-top: 1px solid var(--db-line);
+    border-bottom: 1px solid var(--db-line);
 }
 
 .db-process-step {
     min-width: 0;
-
-    padding: 40px 30px 45px;
-
-    border-right: 1px solid var(--line);
+    padding: 35px 25px 40px;
+    border-right: 1px solid var(--db-line);
 }
 
 .db-process-step:last-child {
-   
+    border-right: 0;
+}
+
+.db-process-step > span {
+    color: var(--db-pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.db-process-step h3 {
+    margin: 25px 0 12px;
+    font-size: 20px;
+}
+
+.db-process-step p {
+    margin: 0;
+    color: var(--db-muted);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   WHY AFRICANNESE
+========================================================= */
+
+.db-why {
+    padding: 115px 0;
+    background: var(--db-black-2);
+}
+
+.db-why-grid {
+    display: grid;
+    grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+    gap: 80px;
+}
+
+.db-why h2 {
+    margin: 0;
+    font-size: clamp(44px,5vw,68px);
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.db-why-copy {
+    color: #c4bdc4;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.db-why-copy p {
+    margin: 0 0 22px;
+}
+
+.db-why-list {
+    margin-top: 30px;
+    border-top: 1px solid var(--db-line);
+}
+
+.db-why-list div {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--db-line);
+    color: var(--db-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   FINAL CALL TO ACTION
+========================================================= */
+
+.db-final-cta {
+    padding: 110px 0;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(18,14,20,.12),
+            transparent 35%
+        ),
+        var(--db-pink);
+    color: var(--db-black);
+}
+
+.db-final-cta h2 {
+    max-width: 800px;
+    margin: 0;
+    font-size: clamp(48px,7vw,88px);
+    letter-spacing: -5px;
+    line-height: .96;
+}
+
+.db-final-cta h2 span {
+    color: rgba(18,14,20,.55);
+}
+
+.db-final-cta p {
+    max-width: 600px;
+    margin: 28px 0 30px;
+    color: rgba(18,14,20,.78);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.db-final-cta .db-btn {
+    background: var(--db-black);
+    color: var(--db-white);
+}
+
+.db-final-cta .db-btn:hover {
+    background: #302532;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.db-footer {
+    padding: 65px 0 25px;
+    background: #0d0a0f;
+}
+
+.db-footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 55px;
+    padding-bottom: 45px;
+}
+
+.db-footer-brand p {
+    max-width: 300px;
+    color: var(--db-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.db-footer-column h4 {
+    margin: 0 0 22px;
+    color: var(--db-pink);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.db-footer-column a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 13px;
+    color: #c4bdc4;
+    font-size: 14px;
+    transition: color .2s ease;
+}
+
+.db-footer-column a:hover {
+    color: var(--db-pink);
+}
+
+.db-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 22px;
+    border-top: 1px solid var(--db-line);
+    color: #8d858e;
+    font-size: 12px;
+}
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.db-whatsapp {
+    position: fixed;
+    z-index: 999;
+    right: 22px;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 22px;
+    border-radius: 40px;
+    background: #20c76a;
+    color: #07190e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.25);
+}
+
+.db-whatsapp:hover {
+    background: #39dc80;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .db-container {
+        width: calc(100% - 48px);
+    }
+
+    .db-header-inner {
+        width: calc(100% - 48px);
+    }
+
+    .db-nav {
+        gap: 17px;
+    }
+
+    .db-nav a {
+        font-size: 12px;
+    }
+
+    .db-hero-grid {
+        gap: 35px;
+        grid-template-columns: minmax(0,1fr) minmax(0,.8fr);
+    }
+
+    .db-intro-grid,
+    .db-cap-grid,
+    .db-why-grid {
+        gap: 45px;
+    }
+
+    .db-service-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .db-process-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .db-process-step:nth-child(2) {
+        border-right: 0;
+    }
+
+    .db-process-step:nth-child(-n+2) {
+        border-bottom: 1px solid var(--db-line);
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .db-container {
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+
+    /* HEADER */
+
+    .db-header-inner {
+        width: calc(100% - 40px);
+        min-height: 78px;
+        gap: 15px;
+    }
+
+    .db-logo-main {
+        font-size: 21px;
+        letter-spacing: 4px;
+    }
+
+    .db-logo-sub {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .db-menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .db-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 22px;
+        background: var(--db-black-2);
+        border-bottom: 1px solid var(--db-line);
+    }
+
+    .db-nav.db-nav-open {
+        display: flex;
+    }
+
+    .db-nav a {
+        display: block;
+        padding: 15px 4px;
+        border-bottom: 1px solid var(--db-line);
+        font-size: 15px;
+    }
+
+    .db-nav .db-nav-cta {
+        margin-top: 12px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* HERO */
+
+    .db-hero {
+        padding: 65px 0 70px;
+    }
+
+    .db-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        gap: 48px;
+        width: 100%;
+    }
+
+    .db-hero-content,
+    .db-hero-visual {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .db-eyebrow {
+        margin-bottom: 25px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+
+    .db-hero h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(43px,11vw,65px);
+        letter-spacing: -2.5px;
+        line-height: .98;
+    }
+
+    .db-hero-text {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 27px;
+        font-size: 16px;
+        line-height: 1.75;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .db-hero-text-small {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .db-hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .db-btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 0 18px;
+    }
+
+    /* BRANDING GRAPHIC */
+
+    .db-hero-visual {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .db-visual-card {
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 1 / 1.05;
+        padding: 28px;
+        box-shadow: 12px 12px 0 rgba(227,148,186,.09);
+    }
+
+    .db-visual-title {
+        font-size: clamp(48px,12vw,68px);
+        letter-spacing: -3px;
+    }
+
+    /* INTRODUCTION */
+
+    .db-intro {
+        padding: 75px 0;
+    }
+
+    .db-intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        gap: 22px;
+    }
+
+    .db-intro h2 {
+        font-size: clamp(39px,10vw,55px);
+        letter-spacing: -2px;
+        line-height: 1;
+    }
+
+    .db-intro-copy {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .db-intro-copy p {
+        font-size: 15px;
+        line-height: 1.8;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    /* SERVICES */
+
+    .db-services {
+        padding: 75px 0;
+    }
+
+    .db-section-heading {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .db-section-heading h2 {
+        font-size: clamp(39px,10vw,55px);
+        letter-spacing: -2px;
+        line-height: 1;
+    }
+
+    .db-section-heading > p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .db-service-grid {
+        grid-template-columns: minmax(0,1fr);
+    }
+
+    .db-service-card {
+        padding: 30px 25px 35px;
+    }
+
+    .db-service-icon {
+        margin: 25px 0 18px;
+    }
+
+    .db-service-card h3 {
+        font-size: 23px;
+    }
+
+    .db-service-card p {
+        min-height: 0;
+        font-size: 14px;
+    }
+
+    /* BRAND STATEMENT */
+
+    .db-statement {
+        padding: 80px 0;
+    }
+
+    .db-statement h2 {
+        font-size: clamp(42px,10vw,64px);
+        letter-spacing: -2.5px;
+        line-height: .98;
+    }
+
+    .db-statement p {
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* CAPABILITIES */
+
+    .db-capabilities {
+        padding: 75px 0;
+    }
+
+    .db-cap-grid {
+        grid-template-columns: minmax(0,1fr);
+        gap: 30px;
+    }
+
+    .db-cap-title h2 {
+        font-size: clamp(40px,10vw,56px);
+        letter-spacing: -2px;
+    }
+
+    .db-cap-item {
+        grid-template-columns: 35px minmax(0,1fr);
+        gap: 12px;
+        padding: 22px 0;
+    }
+
+    .db-cap-item h3 {
+        font-size: 18px;
+    }
+
+    .db-cap-item p {
+        font-size: 14px;
+    }
+
+    /* PROCESS */
+
+    .db-process {
+        padding: 75px 0;
+    }
+
+    .db-process-heading {
+        margin-bottom: 35px;
+    }
+
+    .db-process-heading h2 {
+        font-size: clamp(40px,10vw,56px);
+        letter-spacing: -2px;
+    }
+
+    .db-process-heading p {
+        font-size: 15px;
+    }
+
+    .db-process-grid {
+        grid-template-columns: minmax(0,1fr);
+    }
+
+    .db-process-step {
+        padding: 25px 5px 28px;
+        border-right: 0;
+        border-bottom: 1px solid var(--db-line);
+    }
+
+    .db-process-step:nth-child(2) {
+        border-bottom: 1px solid var(--db-line);
+    }
+
+    .db-process-step:last-child {
+        border-bottom: 0;
+    }
+
+    .db-process-step h3 {
+        margin: 16px 0 9px;
+    }
+
+    /* WHY AFRICANNESE */
+
+    .db-why {
+        padding: 75px 0;
+    }
+
+    .db-why-grid {
+        grid-template-columns: minmax(0,1fr);
+        gap: 28px;
+    }
+
+    .db-why h2 {
+        font-size: clamp(40px,10vw,56px);
+        letter-spacing: -2px;
+    }
+
+    .db-why-copy {
+        font-size: 15px;
+    }
+
+    /* FINAL CTA */
+
+    .db-final-cta {
+        padding: 75px 0;
+    }
+
+    .db-final-cta h2 {
+        font-size: clamp(43px,11vw,65px);
+        letter-spacing: -2.5px;
+    }
+
+    .db-final-cta p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    .db-footer {
+        padding: 50px 0 22px;
+    }
+
+    .db-footer-grid {
+        grid-template-columns: minmax(0,1fr);
+        gap: 32px;
+        padding-bottom: 30px;
+    }
+
+    .db-footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    /* WHATSAPP */
+
+    .db-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        min-height: 48px;
+        padding: 0 17px;
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .db-container {
+        width: calc(100% - 32px);
+    }
+
+    .db-header-inner {
+        width: calc(100% - 32px);
+    }
+
+    .db-logo-main {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .db-hero h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .db-hero-text {
+        font-size: 15px;
+    }
+
+    .db-visual-card {
+        padding: 23px;
+    }
+
+    .db-visual-title {
+        font-size: 46px;
+    }
+
+    .db-whatsapp {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
