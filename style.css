@@ -1,6 +1,6 @@
 /* =====================================================
    AFRICANNESE GROUP
-   CORPORATE HOMEPAGE — MATCHED TO index.html
+   PREMIUM CORPORATE HOMEPAGE
 ===================================================== */
 
 :root {
@@ -533,8 +533,6 @@ img {
   line-height: 1.8;
 }
 
-/* DIVISION GRID */
-
 .division-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -550,7 +548,6 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 34px 38px 28px;
-  background: #101110;
   color: white;
   transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -641,65 +638,54 @@ img {
   font-size: 22px;
 }
 
-/* STEELWORKS — WELDING PHOTO */
+/* =====================================================
+   01 — STEELWORKS
+   REALISTIC WELDING PHOTOGRAPH
+===================================================== */
 
 .steel-card {
   background:
     linear-gradient(
       90deg,
-      rgba(10,10,10,.86) 0%,
-      rgba(10,10,10,.65) 48%,
-      rgba(10,10,10,.28) 100%
+      rgba(16,17,16,.82),
+      rgba(16,17,16,.52)
     ),
     linear-gradient(
       0deg,
-      rgba(0,0,0,.8),
-      transparent 70%
+      rgba(16,17,16,.88),
+      rgba(16,17,16,.08)
     ),
     url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85")
-    center 48% / cover no-repeat;
-}
-
-.steel-card:hover {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10,10,10,.82) 0%,
-      rgba(10,10,10,.55) 48%,
-      rgba(10,10,10,.18) 100%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(0,0,0,.8),
-      transparent 70%
-    ),
-    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85")
-    center 48% / cover no-repeat;
+    center center / cover no-repeat;
 }
 
 .steel-card .card-accent {
   background: var(--yellow);
 }
 
-/* CORPORATE WEAR — RETAINED TURQUOISE */
+/* =====================================================
+   02 — CORPORATE WEAR
+   WORKWEAR PHOTOGRAPH + TURQUOISE BRAND OVERLAY
+===================================================== */
 
 .wear-card {
-  background: var(--turquoise);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32,194,189,.78),
+      rgba(32,194,189,.62)
+    ),
+    url("https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1600&q=85")
+    center center / cover no-repeat;
   color: #101110;
 }
 
-.wear-card .division-subtitle {
-  color: #153331;
-}
-
-.wear-card h3 {
-  color: #101110;
-}
-
+.wear-card .division-subtitle,
 .wear-card p {
-  color: #173b39;
+  color: #102d2b;
 }
 
+.wear-card h3,
 .wear-card .card-number,
 .wear-card .card-arrow,
 .wear-card .card-footer {
@@ -714,25 +700,29 @@ img {
   background: #101110;
 }
 
-/* DIGITAL BRANDING — RETAINED PINK */
+/* =====================================================
+   03 — DIGITAL BRANDING
+   CREATIVE BRANDING PHOTOGRAPH + PINK OVERLAY
+===================================================== */
 
 .digital-card {
-  background: var(--pink);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(217,166,184,.82),
+      rgba(217,166,184,.66)
+    ),
+    url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1600&q=85")
+    center center / cover no-repeat;
   color: #101110;
 }
 
-.digital-card .division-subtitle {
-  color: #4a303a;
-}
-
-.digital-card h3 {
-  color: #101110;
-}
-
+.digital-card .division-subtitle,
 .digital-card p {
-  color: #4d333d;
+  color: #49313a;
 }
 
+.digital-card h3,
 .digital-card .card-number,
 .digital-card .card-arrow,
 .digital-card .card-footer {
@@ -1321,7 +1311,12 @@ img {
   }
 
   .steel-card {
-    background-position: 57% center;
+    background-position: center center;
+  }
+
+  .wear-card,
+  .digital-card {
+    background-position: center center;
   }
 
   /* APPROACH */
